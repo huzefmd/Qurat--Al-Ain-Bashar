@@ -18,69 +18,84 @@ export function Nav({ transparentOnTop = false }: { transparentOnTop?: boolean }
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const on = () => setScrolled(window.scrollY > 24);
-    on();
-    window.addEventListener("scroll", on, { passive: true });
-    return () => window.removeEventListener("scroll", on);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const solid = !transparentOnTop || scrolled;
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        solid ? "glass border-b border-border/60" : "bg-transparent"
-      }`}
+      className="fixed inset-x-0 top-0 z-50 bg-[#F6F1E8] border-b border-gray-200 transition-all duration-300"
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-2 py-1 sm:px-6 lg:px-8">
+        {/* Logo */}
         <Link to="/" className="flex items-center shrink-0">
-          <img src={logo} alt="Qurat-Al-Ain Bashar Foundation" className="h-16 w-16 object-contain sm:h-20 sm:w-20" />
+          <img
+            src={logo}
+            alt="Qurat-Al-Ain Bashar Foundation"
+            className="h-24 w-24 object-contain"
+          />
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex">
-          {links.map((l) => (
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-8 lg:flex">
+          {links.map((link) => (
             <Link
-              key={l.to}
-              to={l.to}
-              activeOptions={{ exact: l.to === "/" }}
-              className={`text-[13px] font-medium tracking-wide transition-colors ${
-                solid
-                  ? "text-ink/70 hover:text-ink"
-                  : "text-ivory/85 hover:text-ivory"
-              }`}
+              key={link.to}
+              to={link.to}
+              activeOptions={{ exact: link.to === "/" }}
+              className="text-[14px] font-medium text-black transition-all duration-200 hover:text-gray-600"
               activeProps={{
-                className: solid
-                  ? "text-ink"
-                  : "text-ivory border-b border-ivory/60 pb-0.5",
+                className:
+                  "text-black border-b-2 border-black pb-1 font-semibold",
               }}
             >
-              {l.label}
+              {link.label}
             </Link>
           ))}
         </nav>
 
+        {/* Mobile Menu Button */}
         <button
-          onClick={() => setOpen((v) => !v)}
-          className={`lg:hidden ${solid ? "text-ink" : "text-ivory"}`}
+          onClick={() => setOpen(!open)}
+          className="lg:hidden text-black"
           aria-label="Toggle menu"
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {open ? (
+            <X className="h-7 w-7" />
+          ) : (
+            <Menu className="h-7 w-7" />
+          )}
         </button>
       </div>
 
+      {/* Mobile Navigation */}
       {open && (
-        <div className="glass border-t border-border/60 lg:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
-            {links.map((l) => (
+        <div className="bg-white border-t border-gray-200 shadow-lg lg:hidden">
+          <nav className="mx-auto flex max-w-7xl flex-col px-4 py-4">
+            {links.map((link) => (
               <Link
-                key={l.to}
-                to={l.to}
+                key={link.to}
+                to={link.to}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2 text-sm font-medium text-ink/80 hover:bg-cream"
-                activeProps={{ className: "bg-cream text-ink" }}
-                activeOptions={{ exact: l.to === "/" }}
+                activeOptions={{ exact: link.to === "/" }}
+                className="rounded-md px-3 py-3 text-base font-medium text-black transition hover:bg-gray-100"
+                activeProps={{
+                  className:
+                    "rounded-md bg-gray-100 px-3 py-3 text-base font-semibold text-black",
+                }}
               >
-                {l.label}
+                {link.label}
               </Link>
             ))}
           </nav>
