@@ -34,6 +34,29 @@ const socials = [
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
 ];
 
+type SocialsProps = {
+  className?: string;
+};
+
+export function Socials({ className = "" }: SocialsProps) {
+  return (
+    <div className={`flex gap-4 ${className}`}>
+      {socials.map(({ icon: Icon, href, label }, i) => (
+        <a
+          key={i}
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={label}
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-600 transition hover:border-amber-400 hover:text-amber-400"
+        >
+          <Icon className="h-5 w-5" />
+        </a>
+      ))}
+    </div>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#2C2118] text-white">
