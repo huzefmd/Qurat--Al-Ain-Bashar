@@ -28,7 +28,7 @@ const footerLinks = [
 ];
 
 const socials = [
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+  { icon: Instagram, href: "https://www.instagram.com/quratalainbasharfoundation/?hl=en", label: "Instagram" },
   { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
   { icon: WhatsApp, href: "https://wa.me/", label: "WhatsApp" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },

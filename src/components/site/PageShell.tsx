@@ -40,14 +40,16 @@ export function PageHero({
       />
       <div className="absolute inset-0 bg-gradient-to-b from-ink/50 via-ink/30 to-ink/80" />
       <div
-        className={`relative mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24 ${
+        className={`relative mx-auto w-full max-w-7xl  px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24  ${
           align === "center" ? "text-center" : ""
         }`}
       >
         {eyebrow && (
-          <p className="mb-4 text-xs uppercase tracking-[0.3em] text-gold animate-fade-up">
-            {eyebrow}
-          </p>
+          <div className="mb-6 flex justify-center">
+            <span className="inline-flex items-center rounded-full border border-gold/40 bg-white/10 px-6 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-gold backdrop-blur-sm">
+              {eyebrow}
+            </span>
+          </div>
         )}
         <h1
           className="font-display text-4xl font-light leading-[1.05] text-ivory text-balance sm:text-6xl lg:text-7xl animate-fade-up"
@@ -72,7 +74,7 @@ export function PageHero({
 
 export function Prose({ children }: { children: ReactNode }) {
   return (
-    <div className="mx-auto max-w-3xl space-y-6 text-[17px] leading-[1.8] text-ink [&>p]:text-balance">
+    <div className="mx-auto max-w-10xl space-y-10 px-6 text-center text-[26px] leading-[2.1] tracking-[0.01em] text-ink sm:px-8 lg:px-12 font-serif">
       {children}
     </div>
   );
