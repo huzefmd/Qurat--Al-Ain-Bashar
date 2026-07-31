@@ -59,7 +59,7 @@ const pillars = [
 
 function Home() {
   return (
-    <div className="min-h-screen bg-background mt-24">
+    <div className="min-h-screen bg-background mt-26">
       <Nav transparentOnTop />
 
       {/* HERO */}
@@ -73,24 +73,57 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/50 to-ivory/10" />
         <div className="absolute inset-0 bg-gradient-to-b from-ivory/15 via-transparent to-ivory/60" />
         {/* <div className="absolute inset-0 bg-gradient-to-r from-ivory/60 via-ivory/30 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ivory/20" /> */} 
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ivory/20" /> */}
 
         <div className="relative mx-auto flex min-h-[90vh] sm:min-h-screen max-w-7xl flex-col justify-center px-5 pt-28 pb-20 sm:px-8 lg:px-8">
           <div className="max-w-2xl">
-            <h1
-              className="font-display text-5xl font-light leading-[0.95] tracking-tight 
-text-ink
-sm:text-6xl
-md:text-7xl
-lg:text-8xl"
-              style={{ animationDelay: "80ms" }}
-            >
-              Artists,
-              <br />
-              Athletes,
-              <br />
-              Altruists<span className="text-ink">.</span>
-            </h1>
+            <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#C8A062] font-semibold">
+              QURAT-AL-AIN BASHAR FOUNDATION
+            </p>
+            <div className="mb-8 flex items-center">
+              <div className="h-px w-28 bg-[#C8A062]/70"></div>
+
+              <svg
+                className="mx-3"
+                width="34"
+                height="14"
+                viewBox="0 0 34 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 7H11"
+                  stroke="#C8A062"
+                  strokeWidth="1.4"
+                />
+
+                <path
+                  d="M23 7H34"
+                  stroke="#C8A062"
+                  strokeWidth="1.4"
+                />
+
+                <path
+                  d="M17 2L21 7L17 12L13 7L17 2Z"
+                  stroke="#C8A062"
+                  strokeWidth="1.4"
+                />
+
+                <circle
+                  cx="17"
+                  cy="7"
+                  r="1.6"
+                  fill="#C8A062"
+                />
+              </svg>
+
+              <div className="h-px w-28 bg-[#C8A062]/70"></div>
+            </div>
+
+            <div className="mt-6 flex items-center">
+              <div className="h-[2px] w-20 bg-amber-600 rounded-full"></div>
+              <div className="ml-3 h-[2px] w-40 bg-gradient-to-r from-amber-600/60 via-amber-400 to-transparent rounded-full"></div>
+            </div>
 
             <div
               className="mt-8 flex items-center gap-4 animate-fade-up"

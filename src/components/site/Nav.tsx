@@ -43,7 +43,7 @@ export function Nav({ transparentOnTop = false }: { transparentOnTop?: boolean }
           <img
             src={logo}
             alt="Qurat-Al-Ain Bashar Foundation"
-            className="h-24 w-24 object-contain"
+            className="h-30 w-30 object-contain"
           />
         </Link>
 
@@ -54,7 +54,7 @@ export function Nav({ transparentOnTop = false }: { transparentOnTop?: boolean }
               key={link.to}
               to={link.to}
               activeOptions={{ exact: link.to === "/" }}
-              className="text-[14px] font-medium text-black transition-all duration-200 hover:text-gray-600"
+              className="text-[17px] font-serif font-medium text-black transition-all duration-200 hover:text-gray-600"
               activeProps={{
                 className:
                   "text-black border-b-2 border-black pb-1 font-semibold",
