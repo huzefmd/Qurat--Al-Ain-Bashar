@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero, Prose } from "@/components/site/PageShell";
 import heroImg from "@/assets/hero-about.jpg";
-import letterImg from "@/assets/founder-letter.jpg";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -71,7 +70,7 @@ function Pillar({
         stiffness: 220,
         damping: 18,
       }}
-      className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-8 shadow-sm transition-all duration-500 hover:border-terracotta/40 hover:shadow-2xl"
+      className="group relative overflow-hidden rounded-2xl border border-border/60 bg-background p-8 shadow-sm transition-all duration-500 hover:border-terracotta/40 hover:shadow-2xl"
     >
       {/* Top Accent */}
       <div className="absolute left-0 top-0 h-1 w-full scale-x-0 bg-gradient-to-r from-terracotta to-gold transition-transform duration-500 group-hover:scale-x-100" />
@@ -123,40 +122,36 @@ function About() {
         image={heroImg}
       />
 
-      <section className="px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+      <section className="px-4 py-20 sm:px-6 sm:py-15 lg:px-8">
         <Prose>
           <p>
-            Qurat-Al-Ain Bashar Foundation is purpose-driven, women-led, and women-operated NGO
+            Qurat-Al-Ain Bashar Foundation is a purpose-driven, women-led, and women-operated NGO
             committed to creating lasting social impact through the combined power of Art,
-            Athleticism, and Altruism.
+            Athleticism, and Altruism. Our organization serves as a collaborative platform where
+            artists, athletes, and altruists come together to inspire communities, promote positive
+            change, and provide humanitarian and social welfare support. We believe that talent,
+            skill, and service can become powerful tools for sustainable social transformation.
           </p>
           <p>
-            Our organization serves as a collaborative platform where artists, athletes, and
-            altruists come together to inspire communities, promote positive change, and provide
-            humanitarian and social welfare support. We believe that talent, skill, and service can
-            become powerful tools for sustainable social transformation.
-          </p>
-          <p>
-            The NGO that blends the transformative power of art, athleticism, and altruism to create
-            meaningful social impact. Our organization serves as a collaborative platform where
-            artists, athletes, altruists unite to raise awareness, inspire change, and deliver
-            direct humanitarian and social welfare support.
+            The NGO that blends the transformative power of art, athleticism, and altruism to create meaningful social impact. Our organization serves as a collaborative platform where artists, athletes, altruists unite
+            to raise awareness, inspire change, and deliver direct humanitarian and social welfare support.
           </p>
           <p>
             Through art exhibitions, sports events, volunteer-led initiatives, and community-driven
             projects, the organization raises awareness of pressing social issues, channels
             resources toward humanitarian aid, and empowers individuals to take part in positive
-            change.
+            change. By acting as a collaborative platform for artists, athletes, and altruists, the
+            NGO transforms passion into purpose — inspiring communities, fostering unity, and
+            delivering direct impact where it is needed most.
           </p>
+
           <p>
-            By acting as a collaborative platform for artists, athletes, altruists the NGO
-            transforms passion into purpose — inspiring communities, fostering unity, and delivering
-            direct impact where it is needed most.
+            By acting as a collaborative platform for artists, athletes, altruists the NGO transforms passion into purpose — inspiring communities, fostering unity, and delivering direct impact where it is needed most.
           </p>
         </Prose>
       </section>
 
-      <section className="bg-cream/60 px-4 py-24 sm:px-6 lg:px-8">
+      <section className="px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <motion.div
             className="mb-16 text-center"
@@ -172,12 +167,12 @@ function About() {
               The Three Pillars
             </motion.p>
 
-            <motion.h2
+            {/* <motion.h2
               variants={itemVariants}
               className="mt-3 font-display text-4xl font-light text-ink sm:text-5xl"
             >
               Creativity. Discipline. Compassion.
-            </motion.h2>
+            </motion.h2> */}
 
             <motion.div
               variants={itemVariants}
@@ -215,14 +210,16 @@ function About() {
           </motion.div>
         </div>
       </section>
-
+      {/* 
       <section className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 font-serif">
         <div className="mx-auto max-w-4xl space-y-16">
           <div className="border-l-2 border-terracotta pl-8">
             <p className="text-xs uppercase tracking-[0.3em] text-ink">A Women-Led Organization</p>
-            <div className="mt-4 space-y-5 text-[17px] leading-[1.85] text-ink font-serif ">
+            <div className="mt-4 space-y-6 text-[17px] leading-[1.85] text-ink font-serif">
               <p>
                 Our NGO is proudly managed entirely by women and operated exclusively by women.
+              </p>
+              <p>
                 Women have immense potential to lead, create, innovate, and serve. This organization
                 exists because we believe in what women can build together.
               </p>
@@ -233,35 +230,110 @@ function About() {
               </p>
             </div>
           </div>
-
-
         </div>
+      </section> */}
+
+
+      <section className="px-4 py-24 sm:py-12 lg:px-8 font-serif">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="mx-auto max-w-3xl text-center"
+        >
+          {/* Eyebrow */}
+          {/* <p className="font-sans text-[11px] uppercase tracking-[0.5em] text-[#C8A062] font-medium">
+            Our Identity
+          </p> */}
+
+          {/* Ornamental rule */}
+          {/* <div className="mx-auto mt-5 flex max-w-md items-center gap-3">
+            <div className="h-px flex-1 bg-[#C8A062]/70" />
+            <svg
+              width="22"
+              height="10"
+              viewBox="0 0 34 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="shrink-0"
+              aria-hidden
+            >
+              <path d="M0 7H11" stroke="#C8A062" strokeWidth="1.4" />
+              <path d="M23 7H34" stroke="#C8A062" strokeWidth="1.4" />
+              <path d="M17 2L21 7L17 12L13 7L17 2Z" stroke="#C8A062" strokeWidth="1.4" />
+              <circle cx="17" cy="7" r="1.6" fill="#C8A062" />
+            </svg>
+            <div className="h-px flex-1 bg-[#C8A062]/70" />
+          </div> */}
+
+          <motion.p
+            variants={itemVariants}
+            className="text-xs uppercase tracking-[0.3em] text-ink"
+          >
+            Our Identity
+          </motion.p>
+
+          {/* <motion.h2
+              variants={itemVariants}
+              className="mt-3 font-display text-4xl font-light text-ink sm:text-5xl"
+            >
+              Creativity. Discipline. Compassion.
+            </motion.h2> */}
+
+          <motion.div
+            variants={itemVariants}
+            className="mx-auto mt-6 h-[2px] w-24 rounded-full bg-gradient-to-r from-transparent via-terracotta to-transparent"
+          />
+
+          {/* Heading — single line */}
+          <h2 className="mt-7 font-serif text-4xl leading-[1.15] text-ink sm:text-5xl">
+            A <span className="italic font-light text-[#A07A3A]">Women-Led</span> Organization
+          </h2>
+
+          {/* Body — flowing paragraphs, easy to read */}
+          <div className="mx-auto mt-8 max-w-3xl space-y-7 text-left font-serif text-[17px] leading-[1.9] text-ink/80 sm:text-[18px]">
+            <p>
+              Our NGO is proudly managed entirely by women and operated exclusively by women.
+              Women have immense potential to lead, create, innovate, and serve, and this
+              organization exists because we believe in what women can build together.
+            </p>
+            <p>
+              We are committed to creating leadership opportunities for women while building an
+              inclusive ecosystem where women drive social innovation, community development, and
+              sustainable change.
+            </p>
+          </div>
+
+          {/* Closing label */}
+          <div className="mt-12 flex items-center justify-center gap-4">
+            <div className="h-px w-10 bg-[#C8A062]/60" />
+            <p className="font-sans text-[11px] uppercase tracking-[0.45em] text-[#A07A3A] font-semibold">
+              Women <span className="text-[#C8A062]">•</span> Leadership{" "}
+              <span className="text-[#C8A062]">•</span> Change
+            </p>
+            <div className="h-px w-10 bg-[#C8A062]/60" />
+          </div>
+        </motion.div>
       </section>
 
       {/* Founder's Letter */}
       <section className="relative overflow-hidden bg-gradient-to-b from-cream via-ivory to-cream px-6 py-24 lg:px-8">
 
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-5xl">
 
-          <div className="mb-20 text-center">
+          <div className="mb-10 ">
 
-            <p className="text-xl text-left uppercase px-2 tracking-[0.8em] text-gold">
-              FROM THE
+            <p className="text-l  uppercase tracking-[0.8em] text-gold">
+              From the
             </p>
 
-            <h2 className="mt-4  text-left font-display text-6xl uppercase tracking-[0.45em] text-ink sm:text-7xl">
-              FOUNDER
+            <h2 className="mt-4 font-display text-4xl uppercase tracking-[0.45em] text-ink sm:text-7xl">
+              Founder
             </h2>
 
-            <div className="mx-auto mt-8 h-px w-20 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+            <div className="mx-auto mt-8 h-px w-20 bg-gradient-to-r from-transparent via-gold to-transparent" />
 
-            <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-ink/70 font-serif">
-              A personal message from our Founder sharing the vision,
-              values, purpose, and inspiration behind the
-              <span className="font-semibold text-terracotta font-serif">
-                {" "}Qurat-Al-Ain Bashar Foundation.
-              </span>
-            </p>
 
           </div>
 
@@ -270,332 +342,155 @@ function About() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="space-y-14"
+            className="font-serif text-[18px] leading-[1.95] text-ink/85"
           >
-
-            {/* Your paragraphs start here */}
-
-            <motion.p
-              variants={fadeUp}
-              className="first-letter:float-left first-letter:mr-4 first-letter:font-display first-letter:text-8xl first-letter:leading-none first-letter:text-gold font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              I'm Shifa Sultana, the founder of Qurat-Al-Ain Bashar Foundation.
-              My vision for this organization wasn't driven by the idea of solving
-              a problem—but rather by a belief.
-            </motion.p>
-            <motion.div
-              variants={fadeUp}
-              className="relative my-14"
-            >
-
-              <span className="absolute -left-2 -top-8 font-display text-8xl text-gold/60">
-                “
-              </span>
-
-              <blockquote className="px-10 text-center font-serif font-display text-4xl italic leading-relaxed text-terracotta">
-
-                I did not establish this organization because I saw limitations.
-                <br />
-                I founded it because I saw possibilities.
-
-              </blockquote>
-
-              <span className="absolute -right-2 bottom-0 font-display text-8xl text-gold/60">
-                ”
-              </span>
-
-            </motion.div>
-
-            {/* Foundation Story */}
-
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              This Foundation was born from a simple yet powerful belief:
-              <span className="font-semibold text-terracotta">
-                {" "}
-                every individual has the ability to create positive change when talent is
-                guided by purpose and compassion.
-              </span>
+            <motion.p variants={fadeUp} className="mb-1 first-letter:float-left first-letter:mr-4 first-letter:font-display first-letter:text-7xl first-letter:leading-[0.9] first-letter:text-gold">
+              I'm Shifa Sultana, the founder of Qurat-Al-Ain Bashar Foundation. My vision for
+              this organization wasn't driven by the idea of solving a problem — but rather by a
+              belief.
             </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              className="my-10 flex justify-center"
-            >
-              <div className="h-px w-24 bg-gold/40"></div>
-            </motion.div>
+            <motion.p variants={fadeUp} className="mb-8">
 
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              Throughout history, women have been creators, caregivers, innovators,
-              athletes, artists, professionals, and community builders. Yet many continue
-              to face barriers that limit their opportunities to lead, earn, and be
-              recognized for their contributions.
+              I did not establish this organization because I saw limitations. I founded it because I saw possibilities.
+
             </motion.p>
 
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              I wanted to create a space where women are not merely included, but where
-              they stand confidently at the center of leadership, innovation, and impact.
+            <motion.p variants={fadeUp} className="mb-8">
+
+              This Foundation was born from a simple yet powerful
+              belief: every individual has the ability to create positive change when talent is
+              guided by purpose and compassion.
+
             </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              className="rounded-3xl border-l-4 border-gold bg-gold/5 px-8 py-8"
-            >
-              <p className="font-display text-3xl italic leading-relaxed text-terracotta">
-                This NGO was built to become that space—
-                where purpose meets possibility.
-              </p>
-            </motion.div>
+            <motion.p variants={fadeUp} className="mb-8">
 
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              It is a platform where women express their creativity as artists, inspire
-              resilience as athletes, and dedicate themselves to humanitarian service as
-              altruists.
+              That belief became the foundation of this organization.
+
+            </motion.p>
+            <motion.p variants={fadeUp} className="mb-8">
+
+              This Foundation was born from a simple yet powerful belief: that every individual has the ability to create positive change when talent is guided by purpose and compassion.
+
             </motion.p>
 
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              Here, talent is valued, leadership is encouraged, and every woman has the
-              opportunity to contribute to something greater than herself.
+            <motion.p variants={fadeUp} className="mb-8">
+
+              That belief became the foundation of this organization.
             </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              className="my-10 flex justify-center"
-            >
-              <div className="h-px w-24 bg-gold/40"></div>
-            </motion.div>
 
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              I dreamed of creating more than an NGO. I envisioned a community where
-              creativity, discipline, and compassion work together to produce lasting
-              social impact.
+            <motion.p variants={fadeUp} className="mb-8">
+
+              Throughout history, women have been creators, caregivers, innovators, athletes,
+              artists, professionals, and community builders — yet many continue to face
+              barriers that limit their opportunities to lead, earn, and be recognized for their
+              contributions. I wanted to create a space where women are not merely included, but
+              where they stand confidently at the center of leadership, innovation, and impact.
+              This NGO was built to become that space — where purpose meets possibility. It is a
+              platform where women express their creativity as artists, inspire resilience as
+              athletes, and dedicate themselves to humanitarian service as altruists. Here, talent
+              is valued, leadership is encouraged, and every woman has the opportunity to
+              contribute to something greater than herself.
             </motion.p>
 
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              A place where artists inspire through their creativity, athletes empower
-              through dedication, and altruists serve with selfless purpose—each
-              contributing their unique strengths to improve lives and strengthen
-              communities.
+
+
+            <motion.p variants={fadeUp} className="mb-8">
+              I dreamed of creating more than an NGO. I envisioned a community where creativity,
+              discipline, and compassion work together to produce lasting social impact — a
+              place where artists inspire through their creativity, athletes empower through
+              dedication, and altruists serve with selfless purpose, each contributing their
+              unique strengths to improve lives and strengthen communities. When women come
+              together with a shared purpose, they create opportunities that extend far beyond
+              themselves and transform entire communities.
+              At the heart of this foundation is another belief that is deeply personal to me: the power of women to lead with vision, integrity, empathy, and resilience.
             </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              className="rounded-3xl bg-ink px-10 py-10"
-            >
-              <blockquote className="text-center font-display text-3xl italic leading-relaxed text-gold">
-                "When women come together with a shared purpose,
-                they create opportunities that extend far beyond
-                themselves and transform entire communities."
-              </blockquote>
-            </motion.div>
-
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              This foundation is proudly women-founded, women-led, and women-operated
-              because I believe that when women unite with a shared vision,
-              collaboration thrives, opportunities multiply, and communities flourish.
+            <motion.p variants={fadeUp} className="mb-8">
+              This foundation is proudly women-founded, women-led, and women-operated. I believe
+              that when women unite with a shared vision, collaboration thrives, opportunities
+              multiply, and communities flourish. Our mission has never been about limiting who we
+              serve. Rather, it has always been about demonstrating what women can build when
+              they lead with integrity, empathy, and purpose. We also wanted to reimagine how an
+              organization creates impact. Rather than relying solely on donations, we chose to
+              build a sustainable model rooted in dignity, value creation, and shared
+              responsibility. Through art, athleticism, education, professional expertise, and
+              acts of service, our members transform their talents into meaningful work, and a
+              portion of that value is reinvested into our mission — creating a continuous cycle
+              of opportunity, empowerment, and lasting community impact.
             </motion.p>
 
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              Our mission has never been about limiting who we serve.
-              Rather, it has always been about demonstrating what women can build
-              when they lead with integrity, empathy, and purpose.
+            <motion.p variants={fadeUp} className="mb-8">
+              This organization is more than an NGO. It is a community of women who believe that
+              creativity, discipline, compassion, and purpose can transform lives. Every
+              initiative we undertake is rooted in the belief that sustainable change begins when
+              women are empowered to lead, collaborate, and uplift one another. Hope is not
+              something we wait for; it is something we create through our actions, our values,
+              and our commitment to one another.
             </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              className="my-10 flex justify-center"
-            >
-              <div className="h-px w-24 bg-gold/40"></div>
-            </motion.div>
-
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              We also wanted to reimagine how an organization creates impact.
-              Rather than relying solely on donations, we chose to build a sustainable
-              model rooted in dignity, value creation, and shared responsibility.
+            <motion.p variants={fadeUp} className="mb-12">
+              My hope is that every woman who joins this journey discovers not only a place to
+              contribute, but also a place to grow, to lead, and to inspire others. Together, we
+              are proving that when women support women, the impact extends far beyond our
+              organization — it strengthens families, transforms communities, and builds a more
+              compassionate and equitable future. This is the legacy we strive to create, and I
+              warmly invite every woman who shares this vision to become part of it.
             </motion.p>
+            {/* 
+          Signature
 
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              Through art, athleticism, education, professional expertise, and acts of
-              service, our members transform their talents into meaningful work.
-              A portion of that value is reinvested into our mission, creating a
-              continuous cycle of opportunity, empowerment, and lasting community impact.
-            </motion.p>
 
-            {/* Closing */}
 
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              This organization is more than an NGO. It is a community of women who
-              believe that creativity, discipline, compassion, and purpose can transform
-              lives. Every initiative we undertake is rooted in the belief that
-              sustainable change begins when women are empowered to lead, collaborate,
-              and uplift one another.
-            </motion.p>
-
-            <motion.div
-              variants={fadeUp}
-              className="rounded-3xl border border-gold/30 bg-gradient-to-r from-gold/5 via-transparent to-gold/5 p-10"
-            >
-              <blockquote className="text-center font-display text-3xl italic leading-relaxed text-terracotta">
-                Hope is not something we wait for.
-                <br />
-                It is something we create through our actions,
-                our values, and our commitment to one another.
-              </blockquote>
-            </motion.div>
-
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              My hope is that every woman who joins this journey discovers not only a
-              place to contribute, but also a place to grow, to lead, and to inspire
-              others.
-            </motion.p>
-
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              Together, we are proving that when women support women, the impact extends
-              far beyond our organization—it strengthens families, transforms
-              communities, and builds a more compassionate and equitable future.
-            </motion.p>
-
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-[20px] leading-[2.1] tracking-[0.01em] text-ink"
-            >
-              This is the legacy we strive to create, and I warmly invite every woman
-              who shares this vision to become part of it.
-            </motion.p>
-
-            {/* Signature */}
-
-            <motion.div
-              variants={fadeUp}
-              className="pt-12"
-            >
-              <div className="mb-8 h-px w-40 bg-gold/40"></div>
-
-              <p className="italic text-xl text-ink">
-                With purpose and hope,
-              </p>
-
-              <h3 className="mt-6 font-display text-5xl text-terracotta">
-                Shifa Sultana
-              </h3>
-
-              <p className="mt-3 uppercase tracking-[0.45em] text-sm text-gold">
-                Founder
+            
+            <motion.div variants={fadeUp} className="border-t border-gold/30 pt-10">
+              <p className="font-display text-3xl italic text-ink">Shifa Sultana</p>
+              <p className="mt-2 text-sm uppercase tracking-[0.35em] text-gold">
+                Founder, Qurat-Al-Ain Bashar Foundation
               </p>
             </motion.div>
 
             {/* Vision / Mission / Belief */}
+            <motion.div variants={fadeUp} className="mt-20 space-y-6">
 
-            <motion.div
-              variants={fadeUp}
-              className="mt-24 space-y-8"
-            >
-
-              {/* Vision */}
-
-              <div className="group rounded-3xl border border-gold/25 bg-ink px-10 py-12 text-center transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-[0_25px_70px_rgba(212,175,55,0.18)]">
-
-                <h3 className="font-display text-5xl text-gold">
-                  Our Vision
-                </h3>
-
-                <div className="mx-auto my-6 h-px w-20 bg-gold/40"></div>
-
-                <p className="mx-auto max-w-4xl text-2xl  font-serif leading-10 text-ivory/80">
-                  To build a world where creativity inspires,
-                  athleticism empowers,
-                  and altruism transforms lives,
-                  creating self-sustaining communities led by women.
+              <div className="rounded-2xl border border-gold/25 bg-ink p-10 text-center">
+                <h3 className="font-display text-3xl text-gold">Our Vision</h3>
+                <div className="mx-auto my-5 h-px w-16 bg-gold/40" />
+                <p className="font-serif text-lg leading-9 text-ivory/85">
+                  To build a world where creativity inspires, athleticism empowers, and altruism
+                  transforms lives — creating self-sustaining communities led by women.
                 </p>
-
               </div>
 
-              {/* Mission */}
-
-              <div className="group rounded-3xl border border-gold/25 bg-ink px-10 py-12 text-center transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-[0_25px_70px_rgba(212,175,55,0.18)]">
-
-                <h3 className="font-display text-5xl text-gold">
-                  Our Mission
-                </h3>
-
-                <div className="mx-auto my-6 h-px w-20 bg-gold/40"></div>
-
-                <p className="mx-auto max-w-4xl text-2xl  font-serif  leading-10 text-ivory/80">
-                  To unite artists, athletes, and altruists through one collaborative
-                  platform that transforms professional talent into meaningful social
-                  impact while promoting women's leadership, education, health,
-                  humanitarian service, and sustainable community development.
+              <div className="rounded-2xl border border-gold/25 bg-ink p-10 text-center">
+                <h3 className="font-display text-3xl text-gold">Our Mission</h3>
+                <div className="mx-auto my-5 h-px w-16 bg-gold/40" />
+                <p className="font-serif text-lg leading-9 text-ivory/85">
+                  To unite artists, athletes, and altruists through one collaborative platform
+                  that transforms professional talent into meaningful social impact while
+                  promoting women's leadership, education, health, humanitarian service, and
+                  sustainable community development.
                 </p>
-
               </div>
 
-              {/* Belief */}
-
-              <div className="group rounded-3xl border border-gold/25 bg-ink px-10 py-12 text-center transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:shadow-[0_25px_70px_rgba(212,175,55,0.18)]">
-
-                <h3 className="font-display text-5xl text-gold">
-                  Our Belief
-                </h3>
-
-                <div className="mx-auto my-6 h-px w-20 bg-gold/40"></div>
-
-                <blockquote className="mx-auto max-w-4xl font-display text-2xl  font-serif  leading-relaxed text-ivory/80">
-                  "Talent is more than a gift—it is a responsibility.
-                  When creativity, discipline, and compassion come together,
-                  they become a force for lasting social change."
-                </blockquote>
-
+              <div className="rounded-2xl border border-gold/25 bg-ink p-10 text-center">
+                <h3 className="font-display text-3xl text-gold">Our Belief</h3>
+                <div className="mx-auto my-5 h-px w-16 bg-gold/40" />
+                <p className="font-display text-xl italic leading-9 text-ivory/85">
+                  "Talent is more than a gift — it is a responsibility. When creativity,
+                  discipline, and compassion come together, they become a force for lasting
+                  social change."
+                </p>
               </div>
 
             </motion.div>
 
-            {/* Close containers */}
-
           </motion.div>
         </div>
       </section>
-     
+
     </PageShell>
   );
 }

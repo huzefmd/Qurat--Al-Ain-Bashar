@@ -72,7 +72,7 @@ function Pillar({
             />
           </div>
         </div>
-        <div className={`space-y-5 text-[16px] leading-[1.85] text-ink ${reverse ? "lg:order-1" : ""}`}>
+        <div className={`space-y-6 text-[16px] leading-[1.85] text-ink font-serif [&>p+p]:mt-6 [&>ul]:my-6 [&>ul]:space-y-3 [&_blockquote]:my-8 ${reverse ? "lg:order-1" : ""}`}>
           {children}
         </div>
       </div>
@@ -114,7 +114,7 @@ function Model() {
             Why We Do Not Rely Primarily on Donations
           </h2>
 
-          <div className="mt-10 space-y-5 text-[16px] leading-[1.85] text-ink">
+          <div className="mt-10 space-y-6 text-[16px] leading-[1.85] text-ink font-serif">
             <p>
               Donations have long played an important role in supporting nonprofit organizations, and we deeply value everyone who chooses to support social causes.
             </p>
@@ -123,7 +123,7 @@ function Model() {
               We believe that the most sustainable form of impact comes from creating value through meaningful work. By encouraging our members to use their talents professionally and contribute a portion of what they earn, we create a self-sustaining model that strengthens both the individual and the community.
             </p>
             <p className="pt-2">This approach allows us to:</p>
-            <ul className="space-y-2 pl-1">
+            <ul className="space-y-3 pl-1">
               <Bullet>Build long-term sustainability.</Bullet>
               <Bullet>Encourage ownership and shared responsibility.</Bullet>
               <Bullet>Create lasting impact without depending solely on external funding.</Bullet>
@@ -148,7 +148,7 @@ function Model() {
             </p>
           </div>
 
-          <div className="mt-10 space-y-5 text-[16px] leading-[1.85] text-ink">
+          <div className="mt-10 space-y-6 text-[16px] leading-[1.85] text-ink font-serif">
             <p>
               This is more than a funding model. It is a philosophy of responsibility, collaboration, and sustainable change.
             </p>

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
+import { Link } from "@tanstack/react-router";
 
 interface Props {
   children: ReactNode;
@@ -72,9 +73,215 @@ export function PageHero({
   );
 }
 
+export function Ornament({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex items-center gap-3 ${className}`}>
+      <div className="h-px flex-1 bg-[#C8A062]/70" />
+      <svg
+        width="22"
+        height="10"
+        viewBox="0 0 34 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="shrink-0"
+        aria-hidden
+      >
+        <path d="M0 7H11" stroke="#C8A062" strokeWidth="1.4" />
+        <path d="M23 7H34" stroke="#C8A062" strokeWidth="1.4" />
+        <path d="M17 2L21 7L17 12L13 7L17 2Z" stroke="#C8A062" strokeWidth="1.4" />
+        <circle cx="17" cy="7" r="1.6" fill="#C8A062" />
+      </svg>
+      <div className="h-px flex-1 bg-[#C8A062]/70" />
+    </div>
+  );
+}
+
+export function PageIntro({
+  eyebrow,
+  title,
+  italicWord,
+  accent,
+  description,
+  primaryCta,
+  secondaryCta,
+  variant = "light",
+  children,
+}: {
+  eyebrow?: string;
+  title: ReactNode;
+  italicWord?: string;
+  accent?: string;
+  description?: ReactNode;
+  primaryCta?: { label: string; to: string };
+  secondaryCta?: { label: string; to: string };
+  variant?: "light" | "dark";
+  children?: ReactNode;
+}) {
+  const isDark = variant === "dark";
+  const eyebrowCls = isDark
+    ? "text-[#E7C77A] font-medium"
+    : "text-[#C8A062] font-medium";
+  const titleCls = isDark ? "text-ivory" : "text-ink";
+  const italicCls = isDark ? "italic font-light text-gold" : "italic font-light text-[#A07A3A]";
+  const accentCls = isDark ? "text-ivory" : "text-ink";
+  const descCls = isDark ? "text-ivory/80" : "text-ink/80";
+  const ruleCls = isDark ? "bg-[#E7C77A]/60" : "bg-[#C8A062]/70";
+  const ornamentStroke = isDark ? "#E7C77A" : "#C8A062";
+
+  return (
+    <section
+      className={`relative overflow-hidden ${isDark ? "bg-ink" : "bg-background"}`}
+    >
+      <div className="relative mx-auto flex max-w-7xl flex-col justify-center px-5 py-24 pt-32 sm:px-8 sm:py-32 lg:px-8">
+        <div className="max-w-3xl">
+          {eyebrow && (
+            <p
+              className={`font-sans text-[11px] uppercase tracking-[0.5em] animate-fade-up ${eyebrowCls}`}
+            >
+              {eyebrow}
+            </p>
+          )}
+
+          <div className={`mt-5 flex items-center gap-3`}>
+            <div className={`h-px flex-1 ${ruleCls}`} />
+            <svg
+              width="22"
+              height="10"
+              viewBox="0 0 34 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="shrink-0"
+              aria-hidden
+            >
+              <path d="M0 7H11" stroke={ornamentStroke} strokeWidth="1.4" />
+              <path d="M23 7H34" stroke={ornamentStroke} strokeWidth="1.4" />
+              <path
+                d="M17 2L21 7L17 12L13 7L17 2Z"
+                stroke={ornamentStroke}
+                strokeWidth="1.4"
+              />
+              <circle cx="17" cy="7" r="1.6" fill={ornamentStroke} />
+            </svg>
+            <div className={`h-px flex-1 ${ruleCls}`} />
+          </div>
+
+          <h1
+            className={`mt-7 font-serif text-[44px] leading-[1.05] tracking-[-0.01em] sm:text-6xl md:text-[68px] md:leading-[1.02] animate-fade-up ${titleCls}`}
+            style={{ animationDelay: "150ms" }}
+          >
+            {italicWord ? (
+              <>
+                {title}{" "}
+                <span className={italicCls}>{italicWord}</span>
+                {description ? null : null}
+              </>
+            ) : (
+              title
+            )}
+          </h1>
+
+          {accent && (
+            <div
+              className="mt-7 flex items-center gap-4 animate-fade-up"
+              style={{ animationDelay: "250ms" }}
+            >
+              <span
+                className={`h-px w-14 ${isDark ? "bg-ivory/50" : "bg-ink/60"}`}
+              />
+              <p
+                className={`font-script text-2xl sm:text-3xl ${accentCls}`}
+              >
+                {accent}
+              </p>
+            </div>
+          )}
+
+          {description && (
+            <p
+              className={`mt-6 max-w-xl font-serif text-[16px] leading-[1.9] sm:text-[17px] animate-fade-up ${descCls}`}
+              style={{ animationDelay: "350ms" }}
+            >
+              {description}
+            </p>
+          )}
+
+          {(primaryCta || secondaryCta) && (
+            <div
+              className="mt-10 flex flex-wrap items-center gap-4 animate-fade-up"
+              style={{ animationDelay: "450ms" }}
+            >
+              {primaryCta && (
+                <Link
+                  to={primaryCta.to}
+                  className={`group inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[12px] font-medium uppercase tracking-[0.25em] transition-all duration-300 ${
+                    isDark
+                      ? "bg-gold text-ink hover:bg-[#E7C77A] hover:shadow-[0_10px_30px_-10px_rgba(231,199,122,0.45)]"
+                      : "bg-ink text-ivory hover:bg-[#1a1410] hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.35)]"
+                  }`}
+                >
+                  {primaryCta.label}
+                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
+              )}
+              {secondaryCta && (
+                <Link
+                  to={secondaryCta.to}
+                  className={`group inline-flex items-center gap-2 rounded-full border px-7 py-3.5 text-[12px] font-medium uppercase tracking-[0.25em] transition-all duration-300 ${
+                    isDark
+                      ? "border-ivory/30 text-ivory hover:border-gold hover:text-gold"
+                      : "border-ink/20 text-ink hover:border-[#C8A062] hover:text-[#A07A3A]"
+                  }`}
+                >
+                  {secondaryCta.label}
+                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
+              )}
+            </div>
+          )}
+
+          {children && <div className="mt-10">{children}</div>}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function Prose({ children }: { children: ReactNode }) {
   return (
-    <div className="mx-auto max-w-10xl space-y-10 px-6 text-center text-[26px] leading-[2.1] tracking-[0.01em] text-ink sm:px-8 lg:px-12 font-serif">
+    <div
+      className="
+        prose-foundation
+        mx-auto
+        max-w-5xl
+        px-6
+        text-left
+        font-serif
+        text-[17px]
+        leading-[1.85]
+        text-ink/85
+        sm:px-8
+        [&_p]:mb-6
+        [&_p:last-child]:mb-0
+        [&_a]:text-terracotta
+        [&_a]:underline
+        [&_a]:decoration-terracotta/40
+        [&_a]:underline-offset-4
+        [&_a]:transition-colors
+        [&_a:hover]:text-gold
+        [&_blockquote]:my-8
+        [&_ul]:my-6
+        [&_ul]:space-y-3
+        [&_ol]:my-6
+        [&_ol]:space-y-3
+        [&_li]:leading-[1.85]
+        [&_strong]:font-semibold
+        [&_strong]:text-ink
+      "
+    >
       {children}
     </div>
   );

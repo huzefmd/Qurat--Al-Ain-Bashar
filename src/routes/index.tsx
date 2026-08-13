@@ -63,217 +63,207 @@ function Home() {
       <Nav transparentOnTop />
 
       {/* HERO */}
-      <section className="relative min-h-[90vh] sm:min-h-screen overflow-hidden">
+      <section className="relative min-h-[92vh] overflow-hidden">
+        {/* Subtle paper texture using a radial wash so the page feels warm and crafted */}
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.35] pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(ellipse at top, rgba(200,160,98,0.10), transparent 60%)",
+          }}
+        />
+
         <img
           src={hero}
           alt="A hijabi woman teacher guiding young children through a lesson"
-          className="absolute inset-0  h-full w-full object-cover object-[60%] sm:object-right"
+          className="absolute inset-0 h-full w-full object-contain object-[60%] sm:object-right"
         />
         {/* Left-side warm wash so headline stays legible */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/50 to-ivory/10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ivory/15 via-transparent to-ivory/60" />
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-ivory/60 via-ivory/30 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ivory/20" /> */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/55 to-ivory/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 via-transparent to-ivory/70" />
 
-        <div className="relative mx-auto flex min-h-[90vh] sm:min-h-screen max-w-7xl flex-col justify-center px-5 pt-28 pb-20 sm:px-8 lg:px-8">
+        <div className="relative mx-auto flex min-h-[92vh] max-w-7xl flex-col justify-center px-5 pt-32 pb-24 sm:px-8 lg:px-8">
           <div className="max-w-2xl">
-            <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#C8A062] font-semibold">
-              QURAT-AL-AIN BASHAR FOUNDATION
-            </p>
-            <div className="mb-8 flex items-center">
-              <div className="h-px w-28 bg-[#C8A062]/70"></div>
+           
 
-              <svg
-                className="mx-3"
-                width="34"
-                height="14"
-                viewBox="0 0 34 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 7H11"
-                  stroke="#C8A062"
-                  strokeWidth="1.4"
-                />
+           
 
-                <path
-                  d="M23 7H34"
-                  stroke="#C8A062"
-                  strokeWidth="1.4"
-                />
+            {/* Foundation name — bigger, widely tracked */}
+            {/* <p
+              className="mt-5 font-serif text-[13px] sm:text-3xl uppercase tracking-[0.35em] text-ink/80 font-semibold animate-fade-up"
+              style={{ animationDelay: "100ms" }}
+            >
+              Qurat-Al-Ain Bashar
+              <span className="mt-10">
+                <div className="mt-2"></div>
+              </span>
 
-                <path
-                  d="M17 2L21 7L17 12L13 7L17 2Z"
-                  stroke="#C8A062"
-                  strokeWidth="1.4"
-                />
+              <span className="tracking-[0.990em] text-center py-10 text-3xl text-center"> Foundation</span>
+            </p> */}
 
-                <circle
-                  cx="17"
-                  cy="7"
-                  r="1.6"
-                  fill="#C8A062"
-                />
-              </svg>
-
-              <div className="h-px w-28 bg-[#C8A062]/70"></div>
-            </div>
-
-            <div className="mt-6 flex items-center">
-              <div className="h-[2px] w-20 bg-amber-600 rounded-full"></div>
-              <div className="ml-3 h-[2px] w-40 bg-gradient-to-r from-amber-600/60 via-amber-400 to-transparent rounded-full"></div>
-            </div>
 
             <div
-              className="mt-8 flex items-center gap-4 animate-fade-up"
-              style={{ animationDelay: "200ms" }}
+              className="mt-5 font-serif text-[13px] sm:text-3xl uppercase tracking-[0.35em] text-ink/80 font-semibold animate-fade-up "
+              style={{ animationDelay: "100ms" }}
             >
-              <span className="h-px w-16 bg-ink" />
-              <p className="font-display italic text-lg text-ink sm:text-xl md:text-2xl">
-                Together, we create lasting change.
-              </p>
+              <div>Qurat-Al-Ain Bashar</div>
+
+              <div className="mt-3  mx-16 tracking-[0.8em] text-3xl text-[#C8A086]">
+                Foundation
+              </div>
             </div>
 
-            <p
-              className="mt-6 max-w-xl text-[15px] leading-8 text-ink/80 sm:max-w-lg
-sm:text-base
-md:max-w-xl"
-              style={{ animationDelay: "300ms" }}
+            {/* Headline */}
+            {/* <h1
+              className="mt-5   px-40 font-serif text-[44px] leading-[1.05] tracking-[-0.01em] text-[#C8A086] sm:text-xl md:text-[23px] md:leading-[1.02] animate-fade-up"
+              style={{ animationDelay: "150ms" }}
             >
-              A women-led, women-operated NGO built on three quiet pillars — Art, Athleticism and
-              Altruism — and the belief that giving, done well, is itself a craft.
+              The <span className="italic font-light text-[#C8A086]">art</span> of
+              giving
+            </h1> */}
+
+            {/* Italic accent line */}
+            {/* <div
+              className="mt-7 flex items-center gap-4 animate-fade-up"
+              style={{ animationDelay: "250ms" }}
+            >
+              <span className="h-px w-14 bg-ink/60" />
+              <p className="font-script text-2xl text-ink sm:text-3xl">
+                Together, we create lasting change.
+              </p>
+            </div> */}
+
+            {/* Body */}
+            <p
+              className="mt-6 max-w-xl font-serif text-[16px] leading-[1.9] text-ink/80 sm:text-[17px] md:max-w-xl animate-fade-up"
+              style={{ animationDelay: "350ms" }}
+            >
+              A women-led NGO that transforms the Art of Giving into a purposeful movement, expressed through the transformative pillars—Art, Athleticism, and Altruism—where talent inspires, passion empowers, and compassion creates lasting change.
             </p>
+
+            {/* CTAs */}
+            <div
+              className="mt-10 flex flex-wrap items-center gap-4 animate-fade-up"
+              style={{ animationDelay: "450ms" }}
+            >
+              <Link
+                to="/about"
+                className="group inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 text-[12px] font-medium uppercase tracking-[0.25em] text-ivory transition-all duration-300 hover:bg-[#1a1410] hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.35)]"
+              >
+                Discover Our Story
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </Link>
+              <Link
+                to="/get-involved"
+                className="group inline-flex items-center gap-2 rounded-full border border-ink/20 bg-transparent px-7 py-3.5 text-[12px] font-medium uppercase tracking-[0.25em] text-ink transition-all duration-300 hover:border-[#C8A062] hover:text-[#A07A3A]"
+              >
+                Get Involved
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </Link>
+            </div>
+
+            {/* Scroll indicator */}
+            {/* <div className="mt-16 hidden items-center gap-3 text-ink/40 sm:flex">
+              <div className="h-8 w-px bg-ink/30" />
+              <span className="font-sans text-[10px] uppercase tracking-[0.4em]">Scroll</span>
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* PILLAR STRIP */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={{
-          hidden: {},
-          visible: {
-            transition: {
-              staggerChildren: 0.15,
+      <section className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-8 lg:py-10">
+        {/* Section heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="mx-auto max-w-2xl text-center"
+        >
+          {/* <p className="font-serif text-[20px] uppercase tracking-[0.5em] text-[#C8A062]">
+            Our Pillars
+          </p> */}
+          {/* <h2 className="mt-5 font-serif text-4xl leading-[1.1] text-ink sm:text-5xl">
+            A craft of giving,
+            <br className="hidden sm:block" /> built on three quiet pillars.
+          </h2> */}
+          {/* <div className="mx-auto mt-7 flex items-center justify-center">
+            <div className="h-px w-16 bg-[#C8A062]/60" />
+            <div className="mx-3 h-1.5 w-1.5 rotate-45 border border-[#C8A062]/70" />
+            <div className="h-px w-16 bg-[#C8A062]/60" />
+          </div> */}
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.15,
+              },
             },
-          },
-        }}
-        className="
-mx-auto
-mt-16
-mb-20
-grid
-max-w-7xl
-gap-6
-px-5
-sm:grid-cols-2
-sm:px-8
-lg:grid-cols-4
-lg:gap-8
-lg:px-8
-"
-      >
-        {pillars.map((p, i) => {
-          const Icon = p.icon;
+          }}
+          className="mt-16 grid gap-6 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4 lg:gap-8"
+        >
+          {pillars.map((p) => {
+            const Icon = p.icon;
 
-          return (
-            <motion.div
-              key={p.title}
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  y: 60,
-                },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
-              }}
-              transition={{
-                duration: 0.6,
-                ease: "easeOut",
-              }}
-              whileHover={{
-                y: -12,
-                scale: 1.04,
-              }}
-              className={`group relative overflow-hidden rounded-3xl bg-white p-8 text-center shadow-sm transition-all duration-500 hover:shadow-2xl cursor-pointer ${
-                i > 0 ? "lg:border-l lg:border-gray-200" : ""
-              }`}
-            >
-              {/* Background Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-orange-50 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
-              {/* Icon */}
+            return (
               <motion.div
-                whileHover={{
-                  rotate: 360,
-                  scale: 1.15,
+                key={p.title}
+                variants={{
+                  hidden: { opacity: 0, y: 50 },
+                  visible: { opacity: 1, y: 0 },
                 }}
-                transition={{
-                  duration: 0.7,
-                }}
-                className="relative z-10 mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-amber-100"
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="group relative overflow-hidden rounded-2xl border border-ink/8 bg-white/80 p-8 text-center shadow-[0_1px_0_rgba(0,0,0,0.02)] backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#C8A062]/40 hover:shadow-[0_25px_50px_-20px_rgba(160,122,58,0.25)] cursor-pointer"
               >
-                <Icon className="h-10 w-10 text-amber-700" strokeWidth={1.8} />
-              </motion.div>
+                {/* Soft warm glow on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-50/0 via-white/0 to-orange-50/0 transition-all duration-700 group-hover:from-amber-50/80 group-hover:via-white/60 group-hover:to-orange-50/60" />
 
-              {/* Divider */}
-              <motion.div
-                className="relative z-10 mx-auto mt-5 h-[2px] w-10 bg-amber-600"
-                whileHover={{
-                  width: 80,
-                }}
-                transition={{
-                  duration: 0.3,
-                }}
-              />
+                {/* Number marker */}
+                <span className="absolute right-6 top-6 font-serif text-sm italic text-ink/15 transition-colors duration-500 group-hover:text-[#C8A062]/60">
+                  0{pillars.indexOf(p) + 1}
+                </span>
 
-              {/* Title */}
-              <h3 className="relative z-10 mt-5 text-sm font-bold uppercase tracking-[0.18em] text-gray-900">
-                {p.title}
-              </h3>
+                {/* Icon */}
+                <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#C8A062]/30 bg-ivory transition-all duration-500 group-hover:border-[#C8A062] group-hover:bg-[#C8A062]/10">
+                  <Icon className="h-7 w-7 text-[#A07A3A] transition-transform duration-500 group-hover:scale-110" strokeWidth={1.5} />
+                </div>
 
-              {/* Description */}
-              <p className="relative z-10 mt-4 text-sm leading-7 text-gray-600">{p.blurb}</p>
+                {/* Hairline divider */}
+                <div className="relative z-10 mx-auto mt-6 h-px w-10 bg-[#C8A062]/40 transition-all duration-500 group-hover:w-16" />
 
-              {/* Button */}
-              <motion.div
-                whileHover={{
-                  scale: 1.08,
-                }}
-                whileTap={{
-                  scale: 0.95,
-                }}
-                className="relative z-10"
-              >
-                <Link
-                  to={p.to}
-                  className="mt-6 inline-flex items-center gap-2 rounded-full border border-amber-700 px-6 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-amber-700 transition-colors duration-300 hover:bg-amber-700 hover:text-white"
-                >
-                  Learn More
-                  <motion.span
-                    whileHover={{
-                      x: 5,
-                    }}
-                    transition={{
-                      duration: 0.2,
-                    }}
+                {/* Title */}
+                <h3 className="relative z-10 mt-5 font-serif text-2xl text-ink">
+                  {p.title}
+                </h3>
+
+                {/* Description */}
+                <p className="relative z-10 mt-4 font-sans text-[14px] leading-7 text-ink/65">
+                  {p.blurb}
+                </p>
+
+                {/* Link */}
+                <div className="relative z-10 mt-7">
+                  <Link
+                    to={p.to}
+                    className="inline-flex items-center gap-2 font-sans text-[11px] font-medium uppercase tracking-[0.3em] text-ink/70 transition-colors duration-300 group-hover:text-[#A07A3A]"
                   >
-                    →
-                  </motion.span>
-                </Link>
+                    Learn more
+                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </Link>
+                </div>
               </motion.div>
-
-              {/* Decorative Circle */}
-              <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-amber-100 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-50" />
-            </motion.div>
-          );
-        })}
-      </motion.div>
+            );
+          })}
+        </motion.div>
+      </section>
 
       <Footer />
     </div>

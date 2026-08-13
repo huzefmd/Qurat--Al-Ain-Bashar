@@ -1,14 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import {
-  Instagram,
-  Facebook,
-  Twitter,
-  Mail,
-  Phone,
-  MapPin,
-  ArrowRight,
-} from "lucide-react";
-import { motion } from "framer-motion";
+import { Instagram, Facebook, Twitter } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const WhatsApp = (props: React.SVGProps<SVGSVGElement>) => (
@@ -60,189 +51,50 @@ export function Socials({ className = "" }: SocialsProps) {
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#2C2118] text-white">
-      {/* Background Glow */}
-      <div className="absolute inset-0">
-        <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-amber-500/10 blur-[120px]" />
-        <div className="absolute right-0 bottom-0 h-72 w-72 rounded-full bg-orange-500/10 blur-[120px]" />
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 py-10 md:flex-row md:justify-between">
+        {/* Brand */}
+        <div className="flex items-center gap-4">
+          <img src={logo} alt="Foundation Logo" className="h-10 w-10 object-contain" />
+          <div>
+            <p className="font-semibold leading-tight">Qurat-Al-Ain Bashar Foundation</p>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-amber-400">The Art of Giving</p>
+          </div>
+        </div>
+
+        {/* Links */}
+        <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-stone-300">
+          {footerLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className="transition hover:text-amber-400"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Socials */}
+        <div className="flex gap-3">
+          {socials.map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={label}
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-stone-600 text-stone-300 transition hover:border-amber-400 hover:text-amber-400"
+            >
+              <Icon className="h-4 w-4" />
+            </a>
+          ))}
+        </div>
       </div>
 
-      {/* CTA Section */}
-      <section className="relative border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-6 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="rounded-3xl border border-amber-400/20 bg-gradient-to-r from-[#3A2B20] to-[#4A3528] p-10 text-center"
-          >
-            <p className="text-sm uppercase tracking-[0.35em] text-amber-400">
-              Join Our Mission
-            </p>
-            <h2 className="mt-4 text-4xl font-light">
-              Together We Can Create
-              <span className="text-amber-400"> Lasting Change.</span>
-            </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-stone-300">
-              Every contribution empowers women, educates children,
-              and strengthens communities through compassion,
-              creativity, and leadership.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Link
-                to="/get-involved"
-                className="rounded-full bg-amber-500 px-8 py-3 font-semibold text-[#2C2118] transition hover:scale-105 hover:bg-amber-400"
-              >
-                Get Involved
-              </Link>
-              <Link
-                to="/contact"
-                className="rounded-full border border-white/20 px-8 py-3 transition hover:border-amber-400 hover:text-amber-400"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Main Footer Grid */}
-      <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-4">
-        {/* Foundation Info */}
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <div className="flex items-center gap-5">
-            <div className="flex h-20 w-20 items-center justify-center rounded-full border border-amber-400/30 bg-amber-500/10">
-              <img src={logo} alt="Foundation Logo" className="h-14 w-14 object-contain" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold leading-tight">Qurat-Al-Ain<br />Bashar Foundation</h3>
-              <p className="mt-2 text-xs uppercase tracking-[0.35em] text-amber-400">The Art of Giving</p>
-            </div>
-          </div>
-          <p className="mt-8 max-w-sm leading-8 text-stone-300">
-            A women-founded, women-led and women-operated NGO committed to
-            empowering lives through Art, Athleticism and Altruism.
-          </p>
-          <div className="mt-10 flex gap-4">
-            {socials.map(({ icon: Icon, href, label }, i) => (
-              <motion.a
-                key={i}
-                href={href}
-                aria-label={label}
-                target="_blank"
-                rel="noreferrer"
-                whileHover={{ y: -6, scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-stone-600 bg-[#3A2B20] text-stone-300 transition hover:border-amber-400 hover:bg-amber-400 hover:text-[#2C2118]"
-              >
-                <Icon className="h-5 w-5" />
-              </motion.a>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Explore */}
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1, duration: 0.6 }}>
-          <p className="text-sm uppercase tracking-[0.35em] text-amber-400">Explore</p>
-          <div className="mt-3 h-[2px] w-12 rounded-full bg-amber-400" />
-          <ul className="mt-8 space-y-5">
-            {footerLinks.map((link) => (
-              <li key={link.to}>
-                <Link to={link.to} className="group inline-flex items-center gap-2 text-stone-300 transition-all duration-300 hover:text-amber-400">
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
-        {/* Contact */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-        >
-          <p className="text-sm uppercase tracking-[0.35em] text-amber-400">
-            Contact
-          </p>
-          <div className="mt-3 h-[2px] w-12 rounded-full bg-amber-400" />
-
-          <div className="mt-8 space-y-7">
-            <div className="flex items-start gap-4">
-              <MapPin className="mt-1 h-5 w-5 text-amber-400" />
-              <div>
-                <p className="font-medium text-white">Address</p>
-                <p className="mt-1 text-sm leading-6 text-stone-300">
-                  Bengaluru, Karnataka, India
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <Mail className="mt-1 h-5 w-5 text-amber-400" />
-              <div>
-                <p className="font-medium text-white">Email</p>
-                <p className="mt-1 text-sm text-stone-300">
-                  info@qabfoundation.org
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <Phone className="mt-1 h-5 w-5 text-amber-400" />
-              <div>
-                <p className="font-medium text-white">Phone</p>
-                <p className="mt-1 text-sm text-stone-300">+91 XXXXX XXXXX</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-      
-      </div> {/* closes the grid wrapper */}
-
-      {/* Bottom Bar */}
       <div className="relative border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-8 md:flex-row">
-
-          {/* Copyright */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center md:text-left"
-          >
-            <p className="text-sm text-stone-400">
-              © {new Date().getFullYear()}{" "}
-              <span className="font-semibold text-white">
-                Qurat-Al-Ain Bashar Foundation
-              </span>
-            </p>
-            <p className="mt-2 text-sm text-stone-500">
-              Empowering Lives • Inspiring Futures
-            </p>
-          </motion.div>
-
-          {/* Footer Links */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="flex flex-wrap items-center justify-center gap-6 text-sm"
-          >
-            <Link to="/privacy" className="text-stone-400 transition hover:text-amber-400">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="text-stone-400 transition hover:text-amber-400">
-              Terms & Conditions
-            </Link>
-            <Link to="/cookies" className="text-stone-400 transition hover:text-amber-400">
-              Cookies
-            </Link>
-          </motion.div>
-        </div>
+        <p className="px-6 py-4 text-center text-xs text-stone-500">
+          © {new Date().getFullYear()} Qurat-Al-Ain Bashar Foundation · Empowering Lives · Inspiring Futures
+        </p>
       </div>
     </footer>
   );
