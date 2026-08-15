@@ -21,13 +21,13 @@ export function PageShell({ children, transparentNav = false }: Props) {
 export function PageHero({
   eyebrow,
   title,
-  subtitle,
+ 
   image,
   align = "center",
 }: {
   eyebrow?: string;
   title: string;
-  subtitle?: string;
+ 
   image: string;
   align?: "left" | "center";
 }) {
@@ -58,16 +58,7 @@ export function PageHero({
         >
           {title}
         </h1>
-        {subtitle && (
-          <p
-            className={`mt-4 max-w-2xl text-sm leading-relaxed text-ivory/85 sm:mt-6 sm:text-base md:text-lg animate-fade-up ${
-              align === "center" ? "mx-auto" : ""
-            }`}
-            style={{ animationDelay: "160ms" }}
-          >
-            {subtitle}
-          </p>
-        )}
+       
       </div>
     </section>
   );
