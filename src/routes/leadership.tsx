@@ -33,7 +33,7 @@ function Leadership() {
         image={heroImg}
       />
 
-      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+      {/* <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         <Prose>
           <p>
             As a women-founded organization, we intentionally created a space where women can lead with confidence, contribute their talents, and build meaningful careers while making a positive impact on society. Every aspect of our organization—from leadership and decision-making to planning, execution, and community engagement—is managed and operated entirely by women.
@@ -50,30 +50,102 @@ function Leadership() {
           <p>
             Our vision is not to exclude others, but to intentionally cultivate a space where women can thrive, support one another, and demonstrate the extraordinary impact of women-led leadership.
           </p>
+
+          <p>
+            Our vision is not to exclude others, but to intentionally cultivate a space where women can thrive, support one another, and demonstrate the extraordinary impact of women-led leadership.
+          </p>
           <p>
             We are women-led organization by belief, not by circumstance. We didn't create this organization because women needed a space. We created it because we believe women can create an extraordinary space—one that leads with purpose, empowers through action, and serves society as a whole.
+          </p>
+
+          <p className="font-display text-xl font-light italic leading-relaxed sm:text-2xl md:text-3xl ">
+            When women rise, families grow stronger. Communities become more resilient. Society moves forward.
           </p>
         </Prose>
       </section>
 
-      <section className="bg-terracotta px-4 py-12 text-center text-ivory sm:px-6 sm:py-16 md:py-20 lg:px-8">
-        <div className="mx-auto max-w-4xl">
+      <div className="mt-5 flex flex-wrap items-center justify-center gap-3 px-2 sm:mt-2 sm:gap-4 sm:px-0">
+        <div className="h-px w-8 bg-[#C8A062]/60 sm:w-10" />
+        <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-[#A07A3A] font-semibold sm:text-[11px] sm:tracking-[0.45em]">
+          Women-led,<span className="text-[#C8A062]">•</span>  women-managed,{" "}
+          <span className="text-[#C8A062]">•</span> and primarily operated by women.
+        </p>
+        <div className="h-px w-8 bg-[#C8A062]/60 sm:w-10" />
+      </div> */}
+
+
+
+      <section className="px-4 pt-16 pb-6 sm:px-6 sm:pt-20 sm:pb-8 lg:px-8 lg:pt-24 lg:pb-8">
+        <Prose>
+          <p>
+            As a women-founded organization, we intentionally created a space where women can lead with confidence, contribute their talents, and build meaningful careers while making a positive impact on society. Every aspect of our organization—from leadership and decision-making to planning, execution, and community engagement—is managed and operated entirely by women.
+          </p>
+
+          <p>
+            This is more than an organizational structure; it is our commitment to creating opportunities where women are trusted as leaders, innovators, artists, athletes, mentors, and changemakers.
+          </p>
+
+          <p>
+            We recognize that many talented women face barriers to leadership, financial independence, and professional growth. Our organization exists to help break those barriers by providing a collaborative platform where women can develop their skills, earn through their work, support one another, and collectively create sustainable social impact.
+          </p>
+
+          <p>
+            By empowering women to lead today, we inspire the next generation of girls to believe that they too can create, lead, and transform their communities.
+          </p>
+
+          <p>
+            Our vision is not to exclude others, but to intentionally cultivate a space where women can thrive, support one another, and demonstrate the extraordinary impact of women-led leadership.
+          </p>
+
+          <p>
+            Our vision is not to exclude others, but to intentionally cultivate a space where women can thrive, support one another, and demonstrate the extraordinary impact of women-led leadership.
+          </p>
+
+          <p>
+            We are women-led organization by belief, not by circumstance. We didn't create this organization because women needed a space. We created it because we believe women can create an extraordinary space—one that leads with purpose, empowers through action, and serves society as a whole.
+          </p>
+
           <p className="font-display text-xl font-light italic leading-relaxed sm:text-2xl md:text-3xl">
             When women rise, families grow stronger. Communities become more resilient. Society moves forward.
           </p>
-          <p className="mt-5 text-[10px] uppercase tracking-[0.2em] text-ivory/85 sm:mt-6 sm:text-xs sm:tracking-[0.3em]">
-            Women-led, women-managed, and primarily operated by women.
-          </p>
-        </div>
+        </Prose>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.2em] text-ink sm:tracking-[0.3em]">Why We Chose</p>
-          <h2 className="mt-3 font-display text-2xl font-light text-ink sm:text-3xl md:text-4xl">
-            Why We Chose to Build This Organization for Women
-          </h2>
-        </div>
+      <div className="mt-2 flex flex-wrap items-center justify-center gap-3 px-2 sm:mt-4 sm:gap-4 sm:px-0">
+        <div className="h-px w-8 bg-[#C8A062]/60 sm:w-10" />
+
+        <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-[#A07A3A] sm:text-[11px] sm:tracking-[0.45em]">
+          Women-led,
+          <span className="text-[#C8A062]"> • </span>
+          women-managed,
+          <span className="text-[#C8A062]"> • </span>
+          and primarily operated by women.
+        </p>
+
+        <div className="h-px w-8 bg-[#C8A062]/60 sm:w-10" />
+      </div>
+
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-18">
+        {/* <Prose >
+          <p className="text-3xl uppercase font-display  tracking-[0.2em] text-ink sm:tracking-[0.3em]">Why</p>
+          <h2 className="mt-2 font-display text-2xl  font-light text-ink sm:text-3xl md:text-4xl">
+            We Chose to Build This Organization for Women
+          </h2> 
+
+        </Prose> */}
+
+        <Prose>
+          <div className="not-prose">
+            <p className="font-cinzel text-xs font-semibold uppercase tracking-[0.45em] text-[#A07A3A]">
+              Why
+            </p>
+
+            <h2 className="mt-4 max-w-4xl font-display text-3xl font-normal leading-[1.15] tracking-[-0.01em] text-[#2C2118] sm:text-4xl md:text-5xl">
+              We Chose to Build This Organization for Women
+            </h2>
+
+          </div>
+        </Prose>
         <div className="mt-10">
           <Prose>
             <p>
@@ -117,12 +189,21 @@ function Leadership() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-ink px-4 py-20 text-center text-ivory sm:px-6 sm:py-24 md:py-32 lg:px-8">
-        <h2 className="font-display text-3xl font-light leading-[1.1] text-ivory text-balance sm:text-5xl md:text-6xl lg:text-7xl">
+      <section className="relative overflow-hidden bg-[#F8F0E3] px-4 py-20 text-center text-ivory sm:px-6 sm:py-24 md:py-32 lg:px-8">
+
+        <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-[#A07A3A] sm:text-[15px] sm:tracking-[0.45em]">
+          Built by Women.
+          <span className="text-[#C8A062]"> • </span>
+          Led by Women.
+          <span className="text-[#C8A062]"> • </span>
+          Serving Humanity.
+        </p>
+
+        {/* <h2 className="font-display text-3xl font-light leading-[1.1] text-ivory text-balance sm:text-5xl md:text-6xl lg:text-7xl">
           Built by Women. <br className="hidden sm:block" />
           Led by Women. <br className="hidden sm:block" />
           <span className="text-gold">Serving Humanity.</span>
-        </h2>
+        </h2> */}
       </section>
     </PageShell>
   );
