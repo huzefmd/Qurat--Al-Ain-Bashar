@@ -51,23 +51,34 @@ export function Socials({ className = "" }: SocialsProps) {
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#2C2118] text-white">
-      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 py-10 md:flex-row md:justify-between">
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-10 px-6 py-16 md:flex-row md:items-center md:justify-between">
+
         {/* Brand */}
-        <div className="flex items-center gap-4">
-          <img src={logo} alt="Foundation Logo" className="h-10 w-10 object-contain" />
+        <div className="flex items-center gap-5">
+          <img
+            src={logo}
+            alt="Foundation Logo"
+            className="h-16 w-16 object-contain"
+          />
+
           <div>
-            <p className="font-semibold leading-tight">Qurat-Al-Ain Bashar Foundation</p>
-            <p className="text-[10px] uppercase tracking-[0.3em] text-amber-400">The Art of Giving</p>
+            <p className="font-cinzel text-lg font-semibold leading-tight">
+              Qurat-Al-Ain Bashar Foundation
+            </p>
+
+            <p className="mt-1 font-cinzel text-xs uppercase tracking-[0.3em] text-amber-400">
+              The Art of Giving
+            </p>
           </div>
         </div>
 
         {/* Links */}
-        <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-stone-300">
+        <nav className="flex max-w-2xl flex-wrap items-center justify-center gap-x-7 gap-y-3 text-sm text-stone-300">
           {footerLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className="transition hover:text-amber-400"
+              className="font-cinzel transition hover:text-amber-400"
             >
               {link.label}
             </Link>
@@ -75,7 +86,7 @@ export function Footer() {
         </nav>
 
         {/* Socials */}
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           {socials.map(({ icon: Icon, href, label }) => (
             <a
               key={label}
@@ -83,17 +94,19 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label={label}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-stone-600 text-stone-300 transition hover:border-amber-400 hover:text-amber-400"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-stone-600 text-stone-300 transition hover:border-amber-400 hover:text-amber-400"
             >
-              <Icon className="h-4 w-4" />
+              <Icon className="h-5 w-5" />
             </a>
           ))}
         </div>
       </div>
 
+      {/* Bottom */}
       <div className="relative border-t border-white/10">
-        <p className="px-6 py-4 text-center text-xs text-stone-500">
-          © {new Date().getFullYear()} Qurat-Al-Ain Bashar Foundation · Empowering Lives · Inspiring Futures
+        <p className="px-6 py-5 text-center font-cinzel text-xs tracking-wide text-stone-500">
+          © {new Date().getFullYear()} Qurat-Al-Ain Bashar Foundation ·
+          Empowering Lives · Inspiring Futures
         </p>
       </div>
     </footer>

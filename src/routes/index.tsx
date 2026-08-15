@@ -79,32 +79,15 @@ function Home() {
           alt="A hijabi woman teacher guiding young children through a lesson"
           className="absolute inset-0 h-full w-full object-contain object-[60%] sm:object-right"
         />
-        {/* Left-side warm wash so headline stays legible */}
+
         <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/55 to-ivory/10" />
         <div className="absolute inset-0 bg-gradient-to-b from-ivory/10 via-transparent to-ivory/70" />
-
         <div className="relative mx-auto flex min-h-[92vh] max-w-7xl flex-col justify-center px-5 pt-32 pb-24 sm:px-8 lg:px-8">
           <div className="max-w-2xl">
-           
-
-           
-
-            {/* Foundation name — bigger, widely tracked */}
-            {/* <p
-              className="mt-5 font-serif text-[13px] sm:text-3xl uppercase tracking-[0.35em] text-ink/80 font-semibold animate-fade-up"
-              style={{ animationDelay: "100ms" }}
-            >
-              Qurat-Al-Ain Bashar
-              <span className="mt-10">
-                <div className="mt-2"></div>
-              </span>
-
-              <span className="tracking-[0.990em] text-center py-10 text-3xl text-center"> Foundation</span>
-            </p> */}
 
 
             <div
-              className="mt-5 font-serif text-[13px] sm:text-3xl uppercase tracking-[0.35em] text-ink/80 font-semibold animate-fade-up "
+              className="mt-5 font-cinzel text-[13px] sm:text-3xl uppercase tracking-[0.35em] text-ink/80 font-semibold animate-fade-up "
               style={{ animationDelay: "100ms" }}
             >
               <div>Qurat-Al-Ain Bashar</div>
