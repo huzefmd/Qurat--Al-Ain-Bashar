@@ -33,7 +33,7 @@ function Leadership() {
         image={heroImg}
       />
 
-      <section className="px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         <Prose>
           <p>
             As a women-founded organization, we intentionally created a space where women can lead with confidence, contribute their talents, and build meaningful careers while making a positive impact on society. Every aspect of our organization—from leadership and decision-making to planning, execution, and community engagement—is managed and operated entirely by women.
@@ -56,21 +56,21 @@ function Leadership() {
         </Prose>
       </section>
 
-      <section className="bg-terracotta px-4 py-16 text-center text-ivory sm:px-6 sm:py-20 lg:px-8">
+      <section className="bg-terracotta px-4 py-12 text-center text-ivory sm:px-6 sm:py-16 md:py-20 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <p className="font-display text-2xl font-light italic leading-relaxed sm:text-3xl">
+          <p className="font-display text-xl font-light italic leading-relaxed sm:text-2xl md:text-3xl">
             When women rise, families grow stronger. Communities become more resilient. Society moves forward.
           </p>
-          <p className="mt-6 text-xs uppercase tracking-[0.3em] text-ivory/85">
+          <p className="mt-5 text-[10px] uppercase tracking-[0.2em] text-ivory/85 sm:mt-6 sm:text-xs sm:tracking-[0.3em]">
             Women-led, women-managed, and primarily operated by women.
           </p>
         </div>
       </section>
 
-      <section className="px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-ink">Why We Chose</p>
-          <h2 className="mt-3 font-display text-3xl font-light text-ink sm:text-4xl">
+          <p className="text-xs uppercase tracking-[0.2em] text-ink sm:tracking-[0.3em]">Why We Chose</p>
+          <h2 className="mt-3 font-display text-2xl font-light text-ink sm:text-3xl md:text-4xl">
             Why We Chose to Build This Organization for Women
           </h2>
         </div>
@@ -103,7 +103,7 @@ function Leadership() {
             <p>
               While women are at the heart of our leadership and operations, the impact of our work is for everyone. Every program we design, every initiative we undertake, and every life we touch is driven by a simple belief:
             </p>
-            <p className="border-l-4 border-terracotta pl-6 font-display text-2xl italic text-ink">
+            <p className="border-l-4 border-terracotta pl-4 font-display text-lg italic text-ink sm:pl-6 sm:text-2xl">
               When women lead with purpose, entire communities flourish.
             </p>
             <p>
@@ -117,8 +117,8 @@ function Leadership() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-ink px-4 py-24 text-center text-ivory sm:px-6 sm:py-32 lg:px-8">
-        <h2 className="font-display text-4xl font-light leading-[1.1] text-ivory text-balance sm:text-6xl lg:text-7xl">
+      <section className="relative overflow-hidden bg-ink px-4 py-20 text-center text-ivory sm:px-6 sm:py-24 md:py-32 lg:px-8">
+        <h2 className="font-display text-3xl font-light leading-[1.1] text-ivory text-balance sm:text-5xl md:text-6xl lg:text-7xl">
           Built by Women. <br className="hidden sm:block" />
           Led by Women. <br className="hidden sm:block" />
           <span className="text-gold">Serving Humanity.</span>

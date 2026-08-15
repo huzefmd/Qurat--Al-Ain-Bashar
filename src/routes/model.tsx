@@ -53,26 +53,26 @@ function Pillar({
   children: React.ReactNode;
 }) {
   return (
-    <section className="px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
-      <div className="mx-auto grid max-w-7xl items-start gap-12 lg:grid-cols-2 lg:gap-16">
+    <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+      <div className="mx-auto grid max-w-7xl items-start gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
         <div className={reverse ? "lg:order-2" : ""}>
-          <div className="sticky top-28">
-            <p className="font-display text-[120px] font-light leading-none text-ink/20 sm:text-[160px]">
+          <div className="lg:sticky lg:top-28">
+            <p className="font-display text-7xl font-light leading-none text-ink/20 sm:text-9xl md:text-[120px] lg:text-[160px]">
               {index}
             </p>
-            <p className="-mt-4 text-xs uppercase tracking-[0.3em] text-ink">{eyebrow}</p>
-            <h2 className="mt-3 font-display text-4xl font-light leading-tight text-ink sm:text-5xl">
+            <p className="mt-2 text-xs uppercase tracking-[0.2em] text-ink sm:-mt-4 sm:tracking-[0.3em]">{eyebrow}</p>
+            <h2 className="mt-3 font-display text-3xl font-light leading-tight text-ink sm:text-4xl md:text-5xl">
               {title}
             </h2>
             <img
               src={image}
               alt=""
-              className="mt-8 aspect-[4/3] w-full rounded-2xl object-cover shadow-lg"
+              className="mt-6 aspect-[4/3] w-full rounded-2xl object-cover shadow-lg sm:mt-8"
               loading="lazy"
             />
           </div>
         </div>
-        <div className={`space-y-6 text-[16px] leading-[1.85] text-ink font-serif [&>p+p]:mt-6 [&>ul]:my-6 [&>ul]:space-y-3 [&_blockquote]:my-8 ${reverse ? "lg:order-1" : ""}`}>
+        <div className={`space-y-5 text-[15px] leading-[1.8] text-ink font-serif sm:space-y-6 sm:text-[16px] sm:leading-[1.85] [&>p+p]:mt-6 [&>ul]:my-6 [&>ul]:space-y-3 [&_blockquote]:my-8 ${reverse ? "lg:order-1" : ""}`}>
           {children}
         </div>
       </div>
@@ -90,7 +90,7 @@ function Model() {
         image={heroImg}
       />
 
-      <section className="px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         <Prose>
           <p>
             The Qurat-Al-Ain Bashar Foundation, we do not rely on public donations or charitable contributions. Instead, we follow a self-sustaining social enterprise model.
@@ -98,7 +98,7 @@ function Model() {
           <p>
             At our foundation, we believe that lasting social change is built on purpose, collaboration, and sustainability. Rather than relying primarily on donations, we have created a model where talent becomes opportunity, opportunity creates value, and that value fuels community impact.
           </p>
-          <p className="border-l-4 border-terracotta pl-6 font-display text-2xl italic text-ink">
+          <p className="border-l-4 border-terracotta pl-4 font-display text-lg italic text-ink sm:pl-6 sm:text-2xl">
             Our philosophy is simple: We create value first, then use that value to create meaningful social impact.
           </p>
           <p>
@@ -107,14 +107,14 @@ function Model() {
         </Prose>
       </section>
 
-      <section className="bg-cream/60 px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <section className="bg-cream/60 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-4xl">
           <p className="text-xs uppercase tracking-[0.3em] text-ink">Why</p>
           <h2 className="mt-3 font-display text-3xl font-light text-ink sm:text-4xl">
             Why We Do Not Rely Primarily on Donations
           </h2>
 
-          <div className="mt-10 space-y-6 text-[16px] leading-[1.85] text-ink font-serif">
+          <div className="mt-10 space-y-6 text-[15px] leading-[1.8] text-ink font-serif sm:text-[16px] sm:leading-[1.85]">
             <p>
               Donations have long played an important role in supporting nonprofit organizations, and we deeply value everyone who chooses to support social causes.
             </p>
@@ -141,14 +141,14 @@ function Model() {
             </p>
           </div>
 
-          <div className="mt-12 rounded-2xl bg-ink px-8 py-10 text-center text-ivory sm:px-12">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">Our Model</p>
-            <p className="mt-4 font-display text-xl leading-relaxed sm:text-2xl">
+          <div className="mt-10 rounded-2xl bg-ink px-6 py-8 text-center text-ivory sm:mt-12 sm:px-8 sm:py-10 md:px-12">
+            <p className="text-xs uppercase tracking-[0.2em] text-gold sm:tracking-[0.3em]">Our Model</p>
+            <p className="mt-4 font-display text-lg leading-relaxed sm:text-xl md:text-2xl">
               Talent → Meaningful Work → Professional Income → Shared Purpose → Community Impact
             </p>
           </div>
 
-          <div className="mt-10 space-y-6 text-[16px] leading-[1.85] text-ink font-serif">
+          <div className="mt-10 space-y-6 text-[15px] leading-[1.8] text-ink font-serif sm:text-[16px] sm:leading-[1.85]">
             <p>
               This is more than a funding model. It is a philosophy of responsibility, collaboration, and sustainable change.
             </p>
@@ -156,7 +156,7 @@ function Model() {
               We believe that every creative idea, every lesson taught, every training session delivered, every performance, every act of service, and every opportunity created has the power to improve lives.
             </p>
             <p>Because lasting change is not only funded. It is created.</p>
-            <p className="pt-2 font-display text-2xl italic text-ink">
+            <p className="pt-2 font-display text-lg italic text-ink sm:text-2xl">
               "Join our mission by creating value."
             </p>
             <p className="pt-2">Here's how our NGO achieves its mission</p>
@@ -184,9 +184,9 @@ function Model() {
             ["Empower Future Generations", "Mentoring aspiring artists, teaching creative skills, and encouraging young people to use art as a tool for innovation, confidence, and self-expression."],
             ["Preserve Culture and Identity", "Celebrating local traditions, indigenous knowledge, and diverse cultural expressions while encouraging creativity that reflects both heritage and contemporary society."],
           ].map(([h, b]) => (
-            <div key={h} className="rounded-xl border border-border/60 bg-card p-5">
-              <p className="font-display text-lg text-ink">{h}</p>
-              <p className="mt-2 text-[15px] leading-relaxed text-ink">{b}</p>
+            <div key={h} className="rounded-xl border border-border/60 bg-card p-4 sm:p-5">
+              <p className="font-display text-base text-ink sm:text-lg">{h}</p>
+              <p className="mt-2 text-[14px] leading-relaxed text-ink sm:text-[15px]">{b}</p>
             </div>
           ))}
         </div>
@@ -194,7 +194,7 @@ function Model() {
         <p>
           At our foundation, every brushstroke, every performance, every story, every photograph, every melody, and every creative idea has the potential to inspire change, strengthen communities, and build a better future.
         </p>
-        <p className="border-l-4 border-terracotta pl-5 font-display text-xl italic text-ink">
+        <p className="border-l-4 border-terracotta pl-4 font-display text-lg italic text-ink sm:pl-5 sm:text-xl">
           We believe that when artists create with purpose, their work becomes more than art—it becomes hope in action.
         </p>
       </Pillar>
@@ -237,9 +237,9 @@ function Model() {
             ["Mentorship & Motivation", "Through mentorship programs, athletes inspire youth to dream bigger, overcome challenges, and build self-confidence. Their stories of discipline, hard work, and perseverance serve as living examples of what is possible with dedication."],
             ["Community Engagement & Social Awareness", "Athletes actively participate in community events, awareness campaigns, and charity matches, using their visibility and influence to raise awareness for social causes, mobilize support, and inspire volunteerism."],
           ].map(([h, b]) => (
-            <div key={h} className="rounded-xl border border-border/60 bg-card p-5">
-              <p className="font-display text-lg text-ink">{h}</p>
-              <p className="mt-2 text-[15px] leading-relaxed text-ink">{b}</p>
+            <div key={h} className="rounded-xl border border-border/60 bg-card p-4 sm:p-5">
+              <p className="font-display text-base text-ink sm:text-lg">{h}</p>
+              <p className="mt-2 text-[14px] leading-relaxed text-ink sm:text-[15px]">{b}</p>
             </div>
           ))}
         </div>
@@ -250,7 +250,7 @@ function Model() {
         <p>
           At our foundation, every training session, every lesson, every competition, and every act of mentorship becomes an opportunity to inspire confidence, strengthen communities, and create lasting social impact.
         </p>
-        <p className="border-l-4 border-terracotta pl-5 font-display text-xl italic text-ink">
+        <p className="border-l-4 border-terracotta pl-4 font-display text-lg italic text-ink sm:pl-5 sm:text-xl">
           We believe that when athletes lead with purpose, every victory extends beyond the field—it becomes a victory for society.
         </p>
       </Pillar>
@@ -288,24 +288,24 @@ function Model() {
         <p>
           At our foundation, every act of kindness, every lesson shared, every hour volunteered, and every initiative undertaken becomes an investment in a better future.
         </p>
-        <p className="border-l-4 border-terracotta pl-5 font-display text-xl italic text-ink">
+        <p className="border-l-4 border-terracotta pl-4 font-display text-lg italic text-ink sm:pl-5 sm:text-xl">
           We believe that when compassion is transformed into action, it creates hope, empowers communities, and inspires lasting change.
         </p>
       </Pillar>
 
-      <section className="relative overflow-hidden bg-ink px-4 py-24 text-center text-ivory sm:px-6 sm:py-28 lg:px-8">
-        <h2 className="font-display text-3xl font-light leading-tight sm:text-5xl">
+      <section className="relative overflow-hidden bg-ink px-4 py-20 text-center text-ivory sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+        <h2 className="font-display text-2xl font-light leading-tight sm:text-4xl md:text-5xl">
           Art inspires. Athleticism empowers. <span className="text-gold">Altruism transforms.</span>
         </h2>
-        <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-ivory/80 sm:text-lg">
+        <p className="mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-ivory/80 sm:text-base md:text-lg">
           Together, these three forces create a holistic ecosystem of change—one that uplifts individuals, strengthens communities, and inspires the world.
         </p>
-        <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-ivory/85">
+        <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-ivory/85 sm:mt-8 sm:text-base">
           We achieve our mission through our Bashar Art Houz a vibrant space where creativity, learning, collaboration, and purpose come together.
         </p>
         <Link
           to="/"
-          className="mt-10 inline-flex items-center gap-2 rounded-full border border-gold px-6 py-3 text-sm font-medium text-ivory transition-colors hover:bg-gold hover:text-ink"
+          className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold px-5 py-2.5 text-xs font-medium text-ivory transition-colors hover:bg-gold hover:text-ink sm:mt-10 sm:px-6 sm:py-3 sm:text-sm"
         >
           Learn more about our Art Houz
           <ArrowRight className="h-4 w-4" />

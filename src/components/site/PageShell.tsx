@@ -32,7 +32,7 @@ export function PageHero({
   align?: "left" | "center";
 }) {
   return (
-    <section className="relative flex min-h-[70vh] items-end overflow-hidden pt-24 sm:min-h-[75vh]">
+    <section className="relative flex min-h-[60vh] items-end overflow-hidden pt-20 sm:min-h-[70vh] sm:pt-24 md:min-h-[75vh]">
       <img
         src={image}
         alt=""
@@ -41,26 +41,26 @@ export function PageHero({
       />
       <div className="absolute inset-0 bg-gradient-to-b from-ink/50 via-ink/30 to-ink/80" />
       <div
-        className={`relative mx-auto w-full max-w-7xl  px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24  ${
+        className={`relative mx-auto w-full max-w-7xl px-5 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-24 ${
           align === "center" ? "text-center" : ""
         }`}
       >
         {eyebrow && (
-          <div className="mb-6 flex justify-center">
-            <span className="inline-flex items-center rounded-full border border-gold/40 bg-white/10 px-6 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-gold backdrop-blur-sm">
+          <div className="mb-5 flex justify-center sm:mb-6">
+            <span className="inline-flex items-center rounded-full border border-gold/40 bg-white/10 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-gold backdrop-blur-sm sm:px-6 sm:py-2 sm:text-xs sm:tracking-[0.3em]">
               {eyebrow}
             </span>
           </div>
         )}
         <h1
-          className="font-display text-4xl font-light leading-[1.05] text-ivory text-balance sm:text-6xl lg:text-7xl animate-fade-up"
+          className="font-display text-3xl font-light leading-[1.05] text-ivory text-balance sm:text-5xl md:text-6xl lg:text-7xl animate-fade-up"
           style={{ animationDelay: "80ms" }}
         >
           {title}
         </h1>
         {subtitle && (
           <p
-            className={`mt-6 max-w-2xl text-base leading-relaxed text-ivory/85 sm:text-lg animate-fade-up ${
+            className={`mt-4 max-w-2xl text-sm leading-relaxed text-ivory/85 sm:mt-6 sm:text-base md:text-lg animate-fade-up ${
               align === "center" ? "mx-auto" : ""
             }`}
             style={{ animationDelay: "160ms" }}
@@ -132,11 +132,11 @@ export function PageIntro({
     <section
       className={`relative overflow-hidden ${isDark ? "bg-ink" : "bg-background"}`}
     >
-      <div className="relative mx-auto flex max-w-7xl flex-col justify-center px-5 py-24 pt-32 sm:px-8 sm:py-32 lg:px-8">
+      <div className="relative mx-auto flex max-w-7xl flex-col justify-center px-5 py-16 pt-24 sm:px-8 sm:py-20 sm:pt-28 md:py-24 md:pt-32 lg:px-8 lg:py-32">
         <div className="max-w-3xl">
           {eyebrow && (
             <p
-              className={`font-sans text-[11px] uppercase tracking-[0.5em] animate-fade-up ${eyebrowCls}`}
+              className={`font-sans text-[10px] uppercase tracking-[0.3em] animate-fade-up sm:text-[11px] sm:tracking-[0.5em] ${eyebrowCls}`}
             >
               {eyebrow}
             </p>
@@ -166,7 +166,7 @@ export function PageIntro({
           </div>
 
           <h1
-            className={`mt-7 font-serif text-[44px] leading-[1.05] tracking-[-0.01em] sm:text-6xl md:text-[68px] md:leading-[1.02] animate-fade-up ${titleCls}`}
+            className={`mt-5 font-serif text-[34px] leading-[1.1] tracking-[-0.01em] sm:mt-7 sm:text-5xl sm:leading-[1.05] md:text-6xl md:leading-[1.02] lg:text-[68px] animate-fade-up ${titleCls}`}
             style={{ animationDelay: "150ms" }}
           >
             {italicWord ? (
@@ -189,7 +189,7 @@ export function PageIntro({
                 className={`h-px w-14 ${isDark ? "bg-ivory/50" : "bg-ink/60"}`}
               />
               <p
-                className={`font-script text-2xl sm:text-3xl ${accentCls}`}
+                className={`font-script text-xl sm:text-2xl md:text-3xl ${accentCls}`}
               >
                 {accent}
               </p>
@@ -198,7 +198,7 @@ export function PageIntro({
 
           {description && (
             <p
-              className={`mt-6 max-w-xl font-serif text-[16px] leading-[1.9] sm:text-[17px] animate-fade-up ${descCls}`}
+              className={`mt-5 max-w-xl font-serif text-[15px] leading-[1.85] sm:mt-6 sm:text-[16px] sm:leading-[1.9] md:text-[17px] animate-fade-up ${descCls}`}
               style={{ animationDelay: "350ms" }}
             >
               {description}
@@ -207,13 +207,13 @@ export function PageIntro({
 
           {(primaryCta || secondaryCta) && (
             <div
-              className="mt-10 flex flex-wrap items-center gap-4 animate-fade-up"
+              className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10 sm:gap-4 animate-fade-up"
               style={{ animationDelay: "450ms" }}
             >
               {primaryCta && (
                 <Link
                   to={primaryCta.to}
-                  className={`group inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[12px] font-medium uppercase tracking-[0.25em] transition-all duration-300 ${
+                  className={`group inline-flex items-center gap-2 rounded-full px-5 py-3 text-[11px] font-medium uppercase tracking-[0.2em] transition-all duration-300 sm:px-7 sm:py-3.5 sm:text-[12px] sm:tracking-[0.25em] ${
                     isDark
                       ? "bg-gold text-ink hover:bg-[#E7C77A] hover:shadow-[0_10px_30px_-10px_rgba(231,199,122,0.45)]"
                       : "bg-ink text-ivory hover:bg-[#1a1410] hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.35)]"
@@ -228,7 +228,7 @@ export function PageIntro({
               {secondaryCta && (
                 <Link
                   to={secondaryCta.to}
-                  className={`group inline-flex items-center gap-2 rounded-full border px-7 py-3.5 text-[12px] font-medium uppercase tracking-[0.25em] transition-all duration-300 ${
+                  className={`group inline-flex items-center gap-2 rounded-full border px-5 py-3 text-[11px] font-medium uppercase tracking-[0.2em] transition-all duration-300 sm:px-7 sm:py-3.5 sm:text-[12px] sm:tracking-[0.25em] ${
                     isDark
                       ? "border-ivory/30 text-ivory hover:border-gold hover:text-gold"
                       : "border-ink/20 text-ink hover:border-[#C8A062] hover:text-[#A07A3A]"
@@ -243,7 +243,7 @@ export function PageIntro({
             </div>
           )}
 
-          {children && <div className="mt-10">{children}</div>}
+          {children && <div className="mt-8 sm:mt-10">{children}</div>}
         </div>
       </div>
     </section>
@@ -257,27 +257,35 @@ export function Prose({ children }: { children: ReactNode }) {
         prose-foundation
         mx-auto
         max-w-5xl
-        px-6
+        px-4
         text-left
         font-serif
-        text-[17px]
-        leading-[1.85]
+        text-[15px]
+        leading-[1.8]
         text-ink/85
-        sm:px-8
-        [&_p]:mb-6
+        sm:px-6
+        sm:text-[16px]
+        sm:leading-[1.85]
+        md:text-[17px]
+        [&_p]:mb-5
         [&_p:last-child]:mb-0
+        sm:[&_p]:mb-6
         [&_a]:text-terracotta
         [&_a]:underline
         [&_a]:decoration-terracotta/40
         [&_a]:underline-offset-4
         [&_a]:transition-colors
         [&_a:hover]:text-gold
-        [&_blockquote]:my-8
-        [&_ul]:my-6
+        [&_blockquote]:my-6
+        sm:[&_blockquote]:my-8
+        [&_ul]:my-5
         [&_ul]:space-y-3
-        [&_ol]:my-6
+        sm:[&_ul]:my-6
+        [&_ol]:my-5
         [&_ol]:space-y-3
-        [&_li]:leading-[1.85]
+        sm:[&_ol]:my-6
+        [&_li]:leading-[1.8]
+        sm:[&_li]:leading-[1.85]
         [&_strong]:font-semibold
         [&_strong]:text-ink
       "

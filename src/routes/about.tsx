@@ -72,7 +72,7 @@ function Pillar({
         stiffness: 220,
         damping: 18,
       }}
-      className="group relative overflow-hidden rounded-2xl border border-border/60 bg-background p-8 shadow-sm transition-all duration-500 hover:border-terracotta/40 hover:shadow-2xl"
+      className="group relative overflow-hidden rounded-2xl border border-border/60 bg-background p-6 shadow-sm transition-all duration-500 hover:border-terracotta/40 hover:shadow-2xl sm:p-8"
     >
       {/* Top Accent */}
       <div className="absolute left-0 top-0 h-1 w-full scale-x-0 bg-gradient-to-r from-terracotta to-gold transition-transform duration-500 group-hover:scale-x-100" />
@@ -85,7 +85,7 @@ function Pillar({
         {title}
       </h3>
 
-      <p className="mt-5 text-[15px] leading-8 text-ink/90">{children}</p>
+      <p className="mt-5 text-[14px] leading-7 text-ink/90 sm:text-[15px] sm:leading-8">{children}</p>
     </motion.div>
   );
 }
@@ -123,7 +123,7 @@ function About() {
         image={heroImg}
       />
 
-      <section className="px-4 py-20 sm:px-6 sm:py-15 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <Prose>
           <p>
             Qurat-Al-Ain Bashar Foundation is a purpose-driven, women-led, and women-operated NGO
@@ -158,7 +158,7 @@ function About() {
         </Prose>
       </section>
 
-      <section className="px-4 py-10 sm:px-6 lg:px-8">
+      <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <motion.div
             className="mb-16 text-center"
@@ -181,7 +181,7 @@ function About() {
           </motion.div>
 
           <motion.div
-            className="grid gap-8 md:grid-cols-3"
+            className="grid gap-6 sm:gap-8 md:grid-cols-3"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
@@ -211,7 +211,7 @@ function About() {
         </div>
       </section>
 
-      <section className="px-4 py-24 sm:py-12 lg:px-8 font-serif">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 font-serif">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -232,12 +232,12 @@ function About() {
           />
 
           {/* Heading — single line */}
-          <h2 className="mt-7 font-serif text-4xl leading-[1.15] text-ink sm:text-5xl">
+          <h2 className="mt-7 font-serif text-3xl leading-[1.15] text-ink sm:text-4xl md:text-5xl">
             A <span className="italic font-light text-[#A07A3A]">Women-Led</span> Organization
           </h2>
 
           {/* Body — flowing paragraphs, easy to read */}
-          <div className="mx-auto mt-8 max-w-3xl space-y-7 text-left font-serif text-[17px] leading-[1.9] text-ink/80 sm:text-[18px]">
+          <div className="mx-auto mt-8 max-w-3xl space-y-6 text-left font-serif text-[16px] leading-[1.85] text-ink/80 sm:space-y-7 sm:text-[17px] sm:leading-[1.9] md:text-[18px]">
             <p>
               Our NGO is proudly managed entirely by women and operated exclusively by women.
               Women have immense potential to lead, create, innovate, and serve, and this
@@ -251,33 +251,33 @@ function About() {
           </div>
 
           {/* Closing label */}
-          <div className="mt-12 flex items-center justify-center gap-4">
-            <div className="h-px w-10 bg-[#C8A062]/60" />
-            <p className="font-sans text-[11px] uppercase tracking-[0.45em] text-[#A07A3A] font-semibold">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3 px-2 sm:mt-12 sm:gap-4 sm:px-0">
+            <div className="h-px w-8 bg-[#C8A062]/60 sm:w-10" />
+            <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-[#A07A3A] font-semibold sm:text-[11px] sm:tracking-[0.45em]">
               Women <span className="text-[#C8A062]">•</span> Leadership{" "}
               <span className="text-[#C8A062]">•</span> Change
             </p>
-            <div className="h-px w-10 bg-[#C8A062]/60" />
+            <div className="h-px w-8 bg-[#C8A062]/60 sm:w-10" />
           </div>
         </motion.div>
       </section>
 
       {/* Founder's Letter */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-cream via-ivory to-cream px-6 py-24 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-b from-cream via-ivory to-cream px-5 py-20 sm:px-6 sm:py-24 lg:px-8">
 
         <div className="mx-auto max-w-5xl">
 
           <div className="mb-10 ">
 
-            <p className="text-l  uppercase tracking-[0.8em] text-gold">
+            <p className="text-sm uppercase tracking-[0.3em] text-gold sm:text-base sm:tracking-[0.5em]">
               From the
             </p>
 
-            <h2 className="mt-4 -ml-1 font-display text-4xl uppercase tracking-[0.45em] text-ink sm:text-7xl">
+            <h2 className="mt-3 font-display text-3xl uppercase tracking-[0.2em] text-ink sm:mt-4 sm:text-6xl sm:tracking-[0.35em] md:text-7xl md:tracking-[0.45em]">
               Founder
             </h2>
 
-            <div className="mx-auto mt-8 h-px w-20 bg-gradient-to-r from-transparent via-gold to-transparent" />
+            <div className="mx-auto mt-6 h-px w-20 bg-gradient-to-r from-transparent via-gold to-transparent sm:mt-8" />
 
 
           </div>
@@ -289,7 +289,7 @@ function About() {
             viewport={{ once: true }}
             className="font-serif text-[18px] leading-[1.95] text-ink/85"
           >
-            <motion.p variants={fadeUp} className="mb-1 first-letter:float-left first-letter:mr-4 first-letter:font-display first-letter:text-7xl first-letter:leading-[0.9] first-letter:text-gold">
+            <motion.p variants={fadeUp} className="mb-1 first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-5xl first-letter:leading-[0.9] first-letter:text-gold sm:first-letter:mr-4 sm:first-letter:text-7xl">
               I'm Shifa Sultana, the founder of Qurat-Al-Ain Bashar Foundation. My vision for
               this organization wasn't driven by the idea of solving a problem — but rather by a
               belief.
@@ -394,7 +394,7 @@ function About() {
 
             <motion.p
               variants={fadeUp}
-              className="mb-4 font-cinzel text-lg uppercase tracking-[0.65em] text-gold"
+              className="mb-4 font-cinzel text-base uppercase tracking-[0.3em] text-gold sm:text-lg sm:tracking-[0.5em]"
             >
               With purpose and hope,
             </motion.p>
@@ -408,7 +408,7 @@ function About() {
 
             <motion.p
               variants={fadeUp}
-              className="text-xs uppercase font-Cinzel tracking-[0.5em] text-muted-foreground"
+              className="text-xs uppercase font-Cinzel tracking-[0.25em] text-muted-foreground sm:tracking-[0.5em]"
             >
               Founder
             </motion.p>
@@ -449,12 +449,12 @@ function About() {
             <motion.div variants={fadeUp} className="mt-20">
 
               {/* Section Heading */}
-              <div className="mb-16 max-w-3xl">
-                <p className="mb-5 font-cinzel text-xs font-semibold uppercase tracking-[0.3em] text-[#B87920]">
+              <div className="mb-10 max-w-3xl sm:mb-16">
+                <p className="mb-5 font-cinzel text-xs font-semibold uppercase tracking-[0.2em] text-[#B87920] sm:tracking-[0.3em]">
                   Vision · Mission · Belief
                 </p>
 
-                <h2 className="font-serif text-4xl font-medium leading-[1.1] tracking-[-0.02em] text-[#2C2118] md:text-5xl lg:text-6xl">
+                <h2 className="font-serif text-3xl font-medium leading-[1.1] tracking-[-0.02em] text-[#2C2118] sm:text-4xl md:text-5xl lg:text-6xl">
                   Lasting change is not only funded.{" "}
                   <span className="text-[#B87920]">
                     It is created.
@@ -465,7 +465,7 @@ function About() {
 
             <motion.div
               variants={fadeUp}
-              className="mt-20 grid grid-cols-1 gap-12 border-t border-[#D8CBB8] pt-8 md:grid-cols-3 md:gap-10"
+              className="mt-12 grid grid-cols-1 gap-10 border-t border-[#D8CBB8] pt-8 sm:mt-16 sm:gap-12 md:mt-20 md:grid-cols-3 md:gap-10"
             >
               {/* OUR VISION */}
               <div className="text-left">
@@ -477,7 +477,7 @@ function About() {
                   Our Vision
                 </h3>
 
-                <p className="font-serif text-xl leading-[1.7] text-[#2C2118]">
+                <p className="font-serif text-base leading-[1.7] text-[#2C2118] sm:text-lg md:text-xl">
                   To build a world where creativity inspires, athleticism empowers,
                   and altruism transforms lives — creating self-sustaining communities
                   led by women.
@@ -494,7 +494,7 @@ function About() {
                   Our Mission
                 </h3>
 
-                <p className="font-serif text-xl leading-[1.7] text-[#2C2118]">
+                <p className="font-serif text-base leading-[1.7] text-[#2C2118] sm:text-lg md:text-xl">
                   To unite artists, athletes, and altruists through one collaborative
                   platform that transforms professional talent into meaningful social
                   impact while promoting women's leadership, education, health,
@@ -512,7 +512,7 @@ function About() {
                   Our Belief
                 </h3>
 
-                <p className="font-serif text-xl leading-[1.7] text-[#2C2118]">
+                <p className="font-serif text-base leading-[1.7] text-[#2C2118] sm:text-lg md:text-xl">
                   Talent is more than a gift — it is a responsibility. When creativity,
                   discipline, and compassion come together, they become a force for
                   lasting social change.

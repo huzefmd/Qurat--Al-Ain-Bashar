@@ -46,7 +46,7 @@ function GetInvolved() {
         image={heroImg}
       />
 
-      <section className="px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         <Prose>
           <p>
             Our NGO was established to empower people, support those in need, and build stronger, more resilient communities. We work alongside volunteers, partners, donors, and community members who share a common vision of a more compassionate and equitable world.
@@ -60,33 +60,33 @@ function GetInvolved() {
         </Prose>
       </section>
 
-      <section className="bg-cream/60 px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <section className="bg-cream/60 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-12 text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-terracotta">Join as</p>
-            <h2 className="mt-3 font-display text-4xl font-light text-ink sm:text-5xl">
+          <div className="mb-10 text-center sm:mb-12">
+            <p className="text-xs uppercase tracking-[0.2em] text-terracotta sm:tracking-[0.3em]">Join as</p>
+            <h2 className="mt-3 font-display text-3xl font-light text-ink sm:text-4xl md:text-5xl">
               Where will you contribute?
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {roles.map(({ label, Icon }) => (
               <div
                 key={label}
-                className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-terracotta hover:shadow-md"
+                className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card p-4 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-terracotta hover:shadow-md sm:p-6"
               >
-                <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-terracotta/10 text-terracotta transition-colors group-hover:bg-terracotta group-hover:text-ivory">
+                <div className="mx-auto grid h-11 w-11 place-items-center rounded-full bg-terracotta/10 text-terracotta transition-colors group-hover:bg-terracotta group-hover:text-ivory sm:h-12 sm:w-12">
                   <Icon className="h-5 w-5" />
                 </div>
-                <p className="mt-4 font-display text-lg text-ink">{label}</p>
+                <p className="mt-3 font-display text-base text-ink sm:mt-4 sm:text-lg">{label}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-14 text-center">
+          <div className="mt-12 text-center sm:mt-14">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-terracotta px-8 py-4 text-sm font-medium uppercase tracking-[0.2em] text-ivory transition-all hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-full bg-terracotta px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-ivory transition-all hover:opacity-90 sm:px-8 sm:py-4 sm:text-sm"
             >
               Application Form
               <ArrowRight className="h-4 w-4" />

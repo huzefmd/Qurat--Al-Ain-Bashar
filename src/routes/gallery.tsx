@@ -63,28 +63,28 @@ function Gallery() {
         image={heroImg}
       />
 
-      <section className="px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-terracotta">We have</p>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl font-light text-ink sm:text-5xl">
+          <p className="text-xs uppercase tracking-[0.2em] text-terracotta sm:tracking-[0.3em]">We have</p>
+          <h2 className="mt-3 max-w-3xl font-display text-2xl font-light text-ink sm:text-4xl md:text-5xl">
             Seventeen disciplines. One shared purpose.
           </h2>
 
-          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-14 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((cat, i) => (
               <div
                 key={cat}
                 className={`group relative aspect-[4/5] overflow-hidden rounded-2xl border border-border/60 bg-gradient-to-br ${tints[i % tints.length]} shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg`}
               >
-                <div className="absolute inset-0 flex flex-col justify-between p-6">
-                  <p className="font-display text-6xl font-light text-ink/15">
+                <div className="absolute inset-0 flex flex-col justify-between p-5 sm:p-6">
+                  <p className="font-display text-5xl font-light text-ink/15 sm:text-6xl">
                     {String(i + 1).padStart(2, "0")}
                   </p>
                   <div>
-                    <p className="text-[11px] uppercase tracking-[0.3em] text-terracotta">
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-terracotta sm:text-[11px] sm:tracking-[0.3em]">
                       Category
                     </p>
-                    <h3 className="mt-2 font-display text-2xl leading-tight text-ink">
+                    <h3 className="mt-2 font-display text-xl leading-tight text-ink sm:text-2xl">
                       {cat}
                     </h3>
                   </div>

@@ -51,29 +51,29 @@ export function Socials({ className = "" }: SocialsProps) {
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#2C2118] text-white">
-      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-10 px-6 py-16 md:flex-row md:items-center md:justify-between">
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-10 px-5 py-12 sm:px-6 sm:py-16 md:flex-row md:items-center md:justify-between md:gap-8">
 
         {/* Brand */}
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-4 sm:gap-5">
           <img
             src={logo}
             alt="Foundation Logo"
-            className="h-16 w-16 object-contain"
+            className="h-14 w-14 sm:h-16 sm:w-16 object-contain"
           />
 
           <div>
-            <p className="font-cinzel text-lg font-semibold leading-tight">
+            <p className="font-cinzel text-base sm:text-lg font-semibold leading-tight">
               Qurat-Al-Ain Bashar Foundation
             </p>
 
-            <p className="mt-1 font-cinzel text-xs uppercase tracking-[0.3em] text-amber-400">
+            <p className="mt-1 font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] text-amber-400">
               The Art of Giving
             </p>
           </div>
         </div>
 
         {/* Links */}
-        <nav className="flex max-w-2xl flex-wrap items-center justify-center gap-x-7 gap-y-3 text-sm text-stone-300">
+        <nav className="flex max-w-2xl flex-wrap items-center justify-center gap-x-5 gap-y-3 text-sm text-stone-300 sm:gap-x-7">
           {footerLinks.map((link) => (
             <Link
               key={link.to}
@@ -86,7 +86,7 @@ export function Footer() {
         </nav>
 
         {/* Socials */}
-        <div className="flex gap-4">
+        <div className="flex gap-3 sm:gap-4">
           {socials.map(({ icon: Icon, href, label }) => (
             <a
               key={label}
@@ -94,7 +94,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label={label}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-stone-600 text-stone-300 transition hover:border-amber-400 hover:text-amber-400"
+              className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-stone-600 text-stone-300 transition hover:border-amber-400 hover:text-amber-400"
             >
               <Icon className="h-5 w-5" />
             </a>
@@ -104,7 +104,7 @@ export function Footer() {
 
       {/* Bottom */}
       <div className="relative border-t border-white/10">
-        <p className="px-6 py-5 text-center font-cinzel text-xs tracking-wide text-stone-500">
+        <p className="px-5 py-5 text-center font-cinzel text-[11px] sm:text-xs tracking-wide text-stone-500">
           © {new Date().getFullYear()} Qurat-Al-Ain Bashar Foundation ·
           Empowering Lives · Inspiring Futures
         </p>
