@@ -7,7 +7,7 @@ export const Route = createFileRoute("/get-involved")({
 
 function GetInvolvedLayout() {
   return (
-    <PageShell>
+    <PageShell transparentNav>
       <Outlet />
     </PageShell>
   );

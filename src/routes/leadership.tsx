@@ -105,7 +105,7 @@ function Leadership() {
             We are women-led organization by belief, not by circumstance. We didn't create this organization because women needed a space. We created it because we believe women can create an extraordinary space—one that leads with purpose, empowers through action, and serves society as a whole.
           </p>
 
-          <p className="font-display text-xl font-light italic leading-relaxed sm:text-2xl md:text-3xl">
+          <p className="  text-lg  leading-relaxed sm:text-2xl md:text-lg   font-serif ">
             When women rise, families grow stronger. Communities become more resilient. Society moves forward.
           </p>
         </Prose>
@@ -125,7 +125,7 @@ function Leadership() {
         <div className="h-px w-8 bg-[#C8A062]/60 sm:w-10" />
       </div>
 
-      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-18">
+      <section className="px-4 py-12 sm:px-6 sm:py-20 lg:px-8 lg:py-18">
         {/* <Prose >
           <p className="text-3xl uppercase font-display  tracking-[0.2em] text-ink sm:tracking-[0.3em]">Why</p>
           <h2 className="mt-2 font-display text-2xl  font-light text-ink sm:text-3xl md:text-4xl">
@@ -140,7 +140,7 @@ function Leadership() {
               Why
             </p>
 
-            <h2 className="mt-4 max-w-4xl font-display text-3xl font-normal leading-[1.15] tracking-[-0.01em] text-[#2C2118] sm:text-4xl md:text-5xl">
+            <h2 className="mt-4 max-w-4xl font-display text-3xl font-normal leading-[1.15] tracking-[-0.01em] text-[#2C2118] sm:text-4xl md:text-3xl">
               We Chose to Build This Organization for Women
             </h2>
 
@@ -175,13 +175,13 @@ function Leadership() {
             <p>
               While women are at the heart of our leadership and operations, the impact of our work is for everyone. Every program we design, every initiative we undertake, and every life we touch is driven by a simple belief:
             </p>
-            <p className="border-l-4 border-terracotta pl-4 font-display text-lg italic text-ink sm:pl-6 sm:text-2xl">
+            <p className=" font-serif text-lg  sm:text-lg">
               When women lead with purpose, entire communities flourish.
             </p>
             <p>
               Our mission is not to separate ourselves from society but to contribute to it through the unique strengths, perspectives, and leadership of women. We are building a space where women can create opportunities, support one another, and transform their talents into lasting social impact.
             </p>
-            <p>This is not simply an organization managed by women.</p>
+            <p className="font-serif text-lg   sm:text-lg">This is not simply an organization managed by women.</p>
             <p>
               It is an organization inspired by what women can achieve together—and dedicated to creating a better future for all.
             </p>
@@ -189,22 +189,27 @@ function Leadership() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#F8F0E3] px-4 py-20 text-center text-ivory sm:px-6 sm:py-24 md:py-32 lg:px-8">
+     
+     
+      <section className=" overflow-hidden bg-[##FDF9F0] px-4 py-12 text-center text-ivory sm:px-6 sm:py-12 md:py-4 lg:px-22 mb-14  ">
+        <div className=" flex flex-wrap items-center justify-center gap-3 px-2 sm:gap-4 sm:px-0">
+          <div className="h-px w-8 bg-[#C8A062]/60 sm:w-10" />
 
-        <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-[#A07A3A] sm:text-[15px] sm:tracking-[0.45em]">
-          Built by Women.
-          <span className="text-[#C8A062]"> • </span>
-          Led by Women.
-          <span className="text-[#C8A062]"> • </span>
-          Serving Humanity.
-        </p>
+          <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.25em] text-[#A07A3A] sm:text-[11px] sm:tracking-[0.45em]">
+            Built by Women.
+            <span className="text-[#C8A062]"> • </span> 
+            Led by Women.
+            <span className="text-[#C8A062]"> • </span>
+            Serving Humanity.
+          </p>
 
-        {/* <h2 className="font-display text-3xl font-light leading-[1.1] text-ivory text-balance sm:text-5xl md:text-6xl lg:text-7xl">
-          Built by Women. <br className="hidden sm:block" />
-          Led by Women. <br className="hidden sm:block" />
-          <span className="text-gold">Serving Humanity.</span>
-        </h2> */}
+          <div className="h-px w-8 bg-[#C8A062]/60 sm:w-10" />
+        </div>
+
+  
       </section>
+
+
     </PageShell>
   );
 }

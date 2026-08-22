@@ -13,9 +13,10 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GalleryRouteImport } from './routes/gallery'
-import { Route as GetInvolvedRouteImport } from './routes/get-involved'
+import { Route as GetInvolvedRouteRouteImport } from './routes/get-involved/route'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as ModelRouteImport } from './routes/model'
+import { Route as PurposeRouteImport } from './routes/purpose'
 import { Route as GetInvolvedIndexRouteImport } from './routes/get-involved/index'
 import { Route as GetInvolvedAltruistRouteImport } from './routes/get-involved/altruist'
 import { Route as GetInvolvedArtistRouteImport } from './routes/get-involved/artist'
@@ -41,7 +42,7 @@ const GalleryRoute = GalleryRouteImport.update({
   path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GetInvolvedRoute = GetInvolvedRouteImport.update({
+const GetInvolvedRouteRoute = GetInvolvedRouteRouteImport.update({
   id: '/get-involved',
   path: '/get-involved',
   getParentRoute: () => rootRouteImport,
@@ -56,35 +57,41 @@ const ModelRoute = ModelRouteImport.update({
   path: '/model',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PurposeRoute = PurposeRouteImport.update({
+  id: '/purpose',
+  path: '/purpose',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GetInvolvedIndexRoute = GetInvolvedIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => GetInvolvedRoute,
+  getParentRoute: () => GetInvolvedRouteRoute,
 } as any)
 const GetInvolvedAltruistRoute = GetInvolvedAltruistRouteImport.update({
   id: '/altruist',
   path: '/altruist',
-  getParentRoute: () => GetInvolvedRoute,
+  getParentRoute: () => GetInvolvedRouteRoute,
 } as any)
 const GetInvolvedArtistRoute = GetInvolvedArtistRouteImport.update({
   id: '/artist',
   path: '/artist',
-  getParentRoute: () => GetInvolvedRoute,
+  getParentRoute: () => GetInvolvedRouteRoute,
 } as any)
 const GetInvolvedAthleteRoute = GetInvolvedAthleteRouteImport.update({
   id: '/athlete',
   path: '/athlete',
-  getParentRoute: () => GetInvolvedRoute,
+  getParentRoute: () => GetInvolvedRouteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/get-involved': typeof GetInvolvedRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
-  '/get-involved': typeof GetInvolvedRouteWithChildren
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
+  '/purpose': typeof PurposeRoute
   '/get-involved/altruist': typeof GetInvolvedAltruistRoute
   '/get-involved/artist': typeof GetInvolvedArtistRoute
   '/get-involved/athlete': typeof GetInvolvedAthleteRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/gallery': typeof GalleryRoute
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
+  '/purpose': typeof PurposeRoute
   '/get-involved/altruist': typeof GetInvolvedAltruistRoute
   '/get-involved/artist': typeof GetInvolvedArtistRoute
   '/get-involved/athlete': typeof GetInvolvedAthleteRoute
@@ -105,12 +113,13 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/get-involved': typeof GetInvolvedRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
-  '/get-involved': typeof GetInvolvedRouteWithChildren
   '/leadership': typeof LeadershipRoute
   '/model': typeof ModelRoute
+  '/purpose': typeof PurposeRoute
   '/get-involved/altruist': typeof GetInvolvedAltruistRoute
   '/get-involved/artist': typeof GetInvolvedArtistRoute
   '/get-involved/athlete': typeof GetInvolvedAthleteRoute
@@ -120,12 +129,13 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/get-involved'
     | '/about'
     | '/contact'
     | '/gallery'
-    | '/get-involved'
     | '/leadership'
     | '/model'
+    | '/purpose'
     | '/get-involved/altruist'
     | '/get-involved/artist'
     | '/get-involved/athlete'
@@ -138,6 +148,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/leadership'
     | '/model'
+    | '/purpose'
     | '/get-involved/altruist'
     | '/get-involved/artist'
     | '/get-involved/athlete'
@@ -145,12 +156,13 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/get-involved'
     | '/about'
     | '/contact'
     | '/gallery'
-    | '/get-involved'
     | '/leadership'
     | '/model'
+    | '/purpose'
     | '/get-involved/altruist'
     | '/get-involved/artist'
     | '/get-involved/athlete'
@@ -159,12 +171,13 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GetInvolvedRouteRoute: typeof GetInvolvedRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
-  GetInvolvedRoute: typeof GetInvolvedRouteWithChildren
   LeadershipRoute: typeof LeadershipRoute
   ModelRoute: typeof ModelRoute
+  PurposeRoute: typeof PurposeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -201,7 +214,7 @@ declare module '@tanstack/react-router' {
       id: '/get-involved'
       path: '/get-involved'
       fullPath: '/get-involved'
-      preLoaderRoute: typeof GetInvolvedRouteImport
+      preLoaderRoute: typeof GetInvolvedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/leadership': {
@@ -218,63 +231,70 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModelRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/purpose': {
+      id: '/purpose'
+      path: '/purpose'
+      fullPath: '/purpose'
+      preLoaderRoute: typeof PurposeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/get-involved/': {
       id: '/get-involved/'
       path: '/'
       fullPath: '/get-involved/'
       preLoaderRoute: typeof GetInvolvedIndexRouteImport
-      parentRoute: typeof GetInvolvedRoute
+      parentRoute: typeof GetInvolvedRouteRoute
     }
     '/get-involved/altruist': {
       id: '/get-involved/altruist'
       path: '/altruist'
       fullPath: '/get-involved/altruist'
       preLoaderRoute: typeof GetInvolvedAltruistRouteImport
-      parentRoute: typeof GetInvolvedRoute
+      parentRoute: typeof GetInvolvedRouteRoute
     }
     '/get-involved/artist': {
       id: '/get-involved/artist'
       path: '/artist'
       fullPath: '/get-involved/artist'
       preLoaderRoute: typeof GetInvolvedArtistRouteImport
-      parentRoute: typeof GetInvolvedRoute
+      parentRoute: typeof GetInvolvedRouteRoute
     }
     '/get-involved/athlete': {
       id: '/get-involved/athlete'
       path: '/athlete'
       fullPath: '/get-involved/athlete'
       preLoaderRoute: typeof GetInvolvedAthleteRouteImport
-      parentRoute: typeof GetInvolvedRoute
+      parentRoute: typeof GetInvolvedRouteRoute
     }
   }
 }
 
-interface GetInvolvedRouteChildren {
+interface GetInvolvedRouteRouteChildren {
   GetInvolvedAltruistRoute: typeof GetInvolvedAltruistRoute
   GetInvolvedArtistRoute: typeof GetInvolvedArtistRoute
   GetInvolvedAthleteRoute: typeof GetInvolvedAthleteRoute
   GetInvolvedIndexRoute: typeof GetInvolvedIndexRoute
 }
 
-const GetInvolvedRouteChildren: GetInvolvedRouteChildren = {
+const GetInvolvedRouteRouteChildren: GetInvolvedRouteRouteChildren = {
   GetInvolvedAltruistRoute: GetInvolvedAltruistRoute,
   GetInvolvedArtistRoute: GetInvolvedArtistRoute,
   GetInvolvedAthleteRoute: GetInvolvedAthleteRoute,
   GetInvolvedIndexRoute: GetInvolvedIndexRoute,
 }
 
-const GetInvolvedRouteWithChildren = GetInvolvedRoute._addFileChildren(
-  GetInvolvedRouteChildren,
-)
+const GetInvolvedRouteRouteWithChildren =
+  GetInvolvedRouteRoute._addFileChildren(GetInvolvedRouteRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GetInvolvedRouteRoute: GetInvolvedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
-  GetInvolvedRoute: GetInvolvedRouteWithChildren,
   LeadershipRoute: LeadershipRoute,
   ModelRoute: ModelRoute,
+  PurposeRoute: PurposeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

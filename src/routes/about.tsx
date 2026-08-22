@@ -287,9 +287,9 @@ function About() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="font-serif text-[18px] leading-[1.95] text-ink/85"
+            className="font-serif text-[18px] leading-[1.95] text-justify text-ink/85"
           >
-            <motion.p variants={fadeUp} className="mb-1 first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-5xl first-letter:leading-[0.9] first-letter:text-gold sm:first-letter:mr-4 sm:first-letter:text-7xl">
+            <motion.p variants={fadeUp} className="mb-1 first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-5xl first-letter:leading-[0.9] first-letter:text-gold sm:first-letter:mr-4 sm:first-letter:text-7xl">
               I'm Shifa Sultana, the founder of Qurat-Al-Ain Bashar Foundation. My vision for
               this organization wasn't driven by the idea of solving a problem — but rather by a
               belief.
@@ -454,11 +454,14 @@ function About() {
                   Vision · Mission · Belief
                 </p>
 
-                <h2 className="font-serif text-3xl font-medium leading-[1.1] tracking-[-0.02em] text-[#2C2118] sm:text-4xl md:text-5xl lg:text-6xl">
-                  Lasting change is not only funded.{" "}
-                  <span className="text-[#B87920]">
-                    It is created.
-                  </span>
+                <h2 className="font-serif text-3xl font-medium leading-[1.1] tracking-[-0.02em] text-[#2C2118] sm:text-4xl md:text-5xl lg:text-1xl">
+                  Lasting change is not only funded.{"  "}
+                  <div>
+                    <span className="text-[#B87920]">
+                      It is created.
+                    </span>
+                  </div>
+                 
                 </h2>
               </div>
 

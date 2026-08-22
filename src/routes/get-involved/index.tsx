@@ -48,7 +48,7 @@ function GetInvolved() {
         image={heroImg}
       />
 
-      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-18">
         <Prose>
           <p>
             Our NGO was established to empower people, support those in need, and build stronger, more resilient communities. We work alongside volunteers, partners, donors, and community members who share a common vision of a more compassionate and equitable world.
@@ -65,10 +65,8 @@ function GetInvolved() {
       <section className="bg-cream/60 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 text-center sm:mb-12">
-            <p className="text-xs uppercase tracking-[0.2em] text-terracotta sm:tracking-[0.3em]">Join as</p>
-            <h2 className="mt-3 font-display text-3xl font-light text-ink sm:text-4xl md:text-5xl">
-              Where will you contribute?
-            </h2>
+            <p className="text-xl uppercase tracking-[0.2em] text-terracotta sm:tracking-[0.3em]">Join as</p>
+
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-3">
@@ -117,7 +115,7 @@ function GetInvolved() {
               to="/contact"
               className="inline-flex items-center gap-2 rounded-full border border-terracotta/40 bg-transparent px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-terracotta transition-all hover:bg-terracotta hover:text-ivory sm:px-8 sm:py-3.5 sm:text-sm"
             >
-              General contact
+              Apply
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

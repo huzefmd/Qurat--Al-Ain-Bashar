@@ -138,7 +138,7 @@ function Model() {
               Why
             </p>
 
-            <h2 className="mt-4 max-w-3xl font-display text-3xl font-light leading-[1.2] tracking-tight text-[#2C2118] sm:text-4xl md:text-5xl">
+            <h2 className="mt-4 max-w-3xl font-display text-3xl font-light leading-[1.2] tracking-tight text-[#2C2118] sm:text-4xl md:text-3xl">
               We Do Not Rely Primarily on Donations
             </h2>
 
@@ -172,7 +172,7 @@ function Model() {
             </p>
           </div>
 
-          <div className="mt-10 rounded-2xl bg-[#F6EDDF] px-8 py-8 text-center text-ivory sm:mt-12 sm:px-8 sm:py-10 md:px-2">
+          <div className="mt-10 rounded-2xl bg-[#F8F1E5] px-8 py-8 text-center text-ivory sm:mt-12 sm:px-8 sm:py-10 md:px-2">
             <p className="text-xs uppercase tracking-[0.2em] text-black sm:tracking-[0.3em]">Our Model</p>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3 pxx-2 sm:mt-12 sm:gap-4 sm:px-0">
@@ -199,7 +199,7 @@ function Model() {
               We believe that every creative idea, every lesson taught, every training session delivered,
               every performance, every act of service, and every opportunity created has the power to improve lives.
             </p>
-            <p>Because lasting change is not only funded. It is created.</p>
+            <p>Because lasting change is not only funded.</p>
             {/* <p className="pt-2 font-display text-lg italic text-ink sm:text-2xl">
               "Join our mission by creating value."
             </p> */}
@@ -209,9 +209,9 @@ function Model() {
             </p>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3 pxx-2 sm:mt-12 sm:gap-4 sm:px-0">
-              <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-[#A07A3A] font-semibold sm:text-[11px] sm:tracking-[0.45em]">
-                " Join our mission<span className="text-[#C8A062]">•</span>by {" "}
-                <span className="text-[#C8A062]">•</span> creating value."
+              <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-[#A07A3A] font-semibold sm:text-[14px] sm:tracking-[0.45em]">
+                Join our mission<span className="text-[#C8A062]"> </span>by {" "}
+                <span className="text-[#C8A062]"> </span> creating value
               </p>
 
             </div>
@@ -222,7 +222,7 @@ function Model() {
         </div>
       </section>
 
-      <div className="text-center text-2xl font-cinzel font-medium mt-15">
+      <div className="text-center text-2xl font-serif font-medium mt-15">
         <p className="pt-2">Here's how our NGO achieves its mission</p>
       </div>
 
@@ -380,7 +380,7 @@ function Model() {
         <div className="mx-auto max-w-3xl">
           <div className="mx-auto mb-5 h-px w-12 bg-terracotta/50" />
 
-          <p className="font-display text-xl font-light italic leading-relaxed text-ink sm:text-2xl md:text-3xl">
+          <p className="font-serif text-xl  leading-relaxed text-ink sm:text-2xl md:text-1xl mb-10">
             “We believe that when artists create with purpose, their work becomes
             more than art—it becomes hope in action.”
           </p>
@@ -482,63 +482,31 @@ function Model() {
           ))}
         </div>
 
-        <p>
-          By channeling their physical skills, mental resilience, and passion for service, athletes in our NGO help transform sports into a powerful tool for social upliftment, bridging gaps, inspiring hope, and nurturing talent in communities that need it most.
-        </p>
-        <p>
-          At our foundation, every training session, every lesson, every competition, and every act of mentorship becomes an opportunity to inspire confidence, strengthen communities, and create lasting social impact.
-        </p>
+       
       
       </Pillar>
 
       <div className="mt-2 mx-auto max-w-3xl text-center">
 
-        <p className="font-display text-xl font-light italic leading-relaxed text-ink sm:text-2xl md:text-3xl">
-          “We believe that when athletes lead with purpose, every victory extends
-          beyond the field—it becomes a victory for society.”
+        <p className="mx-auto max-w-3xl font-serif text-[15px] leading-8 text-ink/80 sm:text-base sm:leading-9">
+          By channeling their physical skills, mental resilience, and passion for service, athletes in our NGO help transform sports into a powerful tool for social upliftment, bridging gaps, inspiring hope, and nurturing talent in communities that need it most.
         </p>
+        <p className="mx-auto my-10 max-w-3xl font-serif text-[15px] leading-8 text-ink/80 sm:text-base sm:leading-9">
+          At our foundation, every training session, every lesson, every competition, and every act of mentorship becomes an opportunity to inspire confidence, strengthen communities, and create lasting social impact.
+        </p>
+
+        <div>
+          <div className="mx-auto mb-5 h-px w-12 bg-terracotta/50" />
+          <p className="font-serif text-xl  leading-relaxed text-ink sm:text-2xl md:text-1xl mb-10">
+            “We believe that when athletes lead with purpose, every victory extends
+            beyond the field—it becomes a victory for society.”
+          </p>
+        </div>
+
       </div>
 
  
       <div className=" mt-6 border-t border-border/60" />
-
-      {/* <Pillar  eyebrow="Compassion that Serves" title="Altruism" image={altImg}>
-        <p>
-          Altruists contribute their knowledge, experience, and compassion through education, mentoring, professional services, humanitarian initiatives, research, community development, environmental action, and social welfare projects.
-        </p>
-        <p>
-          By offering their expertise, they create meaningful value while directly improving the lives of others.
-        </p>
-        <p>
-          At our foundation, we believe that altruism is the heart of meaningful change. It is the selfless commitment to improving the lives of others through compassion, service, and purposeful action.
-        </p>
-        <p>
-          Altruists come in as educators, mentors, volunteer to address the needs of individuals and communities. Whether through education, healthcare, environmental stewardship, mentorship, or humanitarian initiatives, they help create opportunities that empower people to thrive.
-        </p>
-
-        <ul className="space-y-3">
-          <Bullet><b>Serve with Compassion:</b> Supporting individuals and communities through humanitarian efforts, social welfare initiatives, and acts of service that promote dignity, inclusion, and well-being.</Bullet>
-          <Bullet><b>Share Knowledge and Expertise:</b> Professionals, educators, mentors, and volunteers contribute their skills and experience to educate, guide, and empower others, creating opportunities for lifelong growth and development.</Bullet>
-          <Bullet><b>Educational Support:</b> Scholarships, mentorship programs, and skill development for underprivileged youth.</Bullet>
-          <Bullet><b>Strengthen Communities:</b> By working alongside local communities, altruists help identify challenges, develop sustainable solutions, and build stronger, more resilient societies.</Bullet>
-          <Bullet><b>Direct Humanitarian Support:</b> Food drives, clothing distribution, medical camps, and emergency relief efforts.</Bullet>
-          <Bullet><b>Champion Social Responsibility:</b> Altruists inspire individuals and organizations to embrace kindness, ethical leadership, civic responsibility, and a culture of giving back through meaningful action.</Bullet>
-          <Bullet><b>Volunteer Mobilization:</b> Bringing together changemakers—students, professionals, and communities—to give time and skills for impactful projects.</Bullet>
-          <Bullet><b>Community Engagement:</b> Spreading kindness and awareness through events, campaigns, and grassroots initiatives.</Bullet>
-        </ul>
-
-        <p>
-          Altruism fuels every effort, ensuring that creativity and athleticism are always directed toward genuine human need.
-        </p>
-        <p>
-          At our foundation, every act of kindness, every lesson shared, every hour volunteered, and every initiative undertaken becomes an investment in a better future.
-        </p>
-        <p className="border-l-4 border-terracotta pl-4 font-display text-lg italic text-ink sm:pl-5 sm:text-xl">
-          We believe that when compassion is transformed into action, it creates hope, empowers communities, and inspires lasting change.
-        </p>
-      </Pillar> */}
-
-
       <Pillar
         eyebrow="Compassion that Serves"
         title="Altruism"
@@ -644,16 +612,7 @@ function Model() {
 
         </ul>
 
-        <p>
-          Altruism fuels every effort, ensuring that creativity and athleticism are
-          always directed toward genuine human need.
-        </p>
 
-        <p>
-          At our foundation, every act of kindness, every lesson shared, every hour
-          volunteered, and every initiative undertaken becomes an investment in a
-          better future.
-        </p>
 
         {/* Closing Quote */}
         {/* <div className="mt-10 mx-auto max-w-3xl text-center">
@@ -667,29 +626,71 @@ function Model() {
       </Pillar>
 
 
+
+      <div className="mt-2 mx-auto max-w-3xl text-center">
+
+        <p className="mx-auto max-w-3xl font-serif text-[15px] leading-8 text-ink/80 sm:text-base sm:leading-9">
+          Altruism fuels every effort, ensuring that creativity and athleticism are
+          always directed toward genuine human need.     </p>
+        
+        <p className="mx-auto mb-8  max-w-3xl font-serif text-[15px] leading-8 text-ink/80 sm:text-base sm:leading-9">
+          At our foundation, every act of kindness, every lesson shared, every hour
+          volunteered, and every initiative undertaken becomes an investment in a
+          better future.        </p>
+
+        <div>
+          <div className="mx-auto mb-5 h-px w-12 bg-terracotta/50" />
+          <p className="font-serif text-xl  leading-relaxed text-ink sm:text-2xl md:text-1xl mb-10">
+            “When compassion is transformed into action, it creates hope, empowers
+            communities, and inspires lasting change.”
+          </p>
+        </div>
+
+      </div>
+{/* 
+
       <div className="mt-2 mb-20 mx-auto max-w-3xl text-center">
 
-        <p className="font-display text-xl font-light italic leading-relaxed text-ink sm:text-2xl md:text-3xl">
-          “When compassion is transformed into action, it creates hope, empowers
-          communities, and inspires lasting change.”
+        <p>
+          Altruism fuels every effort, ensuring that creativity and athleticism are
+          always directed toward genuine human need.
         </p>
-      </div>
 
-      <section className="relative overflow-hidden bg-ink px-4 py-20 text-center text-ivory sm:px-6 sm:py-24 lg:px-8 lg:py-28">
-        <h2 className="font-display text-2xl font-light leading-tight sm:text-4xl md:text-5xl">
-          Art inspires. Athleticism empowers. <span className="text-gold">Altruism transforms.</span>
+        <p>
+          At our foundation, every act of kindness, every lesson shared, every hour
+          volunteered, and every initiative undertaken becomes an investment in a
+          better future.
+        </p>
+
+        <div>
+
+          <p className="font-display text-xl font-light italic leading-relaxed text-ink sm:text-2xl md:text-3xl">
+            “When compassion is transformed into action, it creates hope, empowers
+            communities, and inspires lasting change.”
+          </p>
+
+        </div>
+
+      </div> */}
+
+      <section className="relative overflow-hidden bg-[#F6EDDE] px-4 py-20 text-center text-black sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+        <h2 className="font-sans text-[10px] uppercase tracking-[0.25em] text-[#A07A3A] font-semibold sm:text-[15px] sm:tracking-[0.45em]  pb-10">
+          Art inspires. Athleticism empowers. <span className="text-[#A07A3A]">Altruism transforms.</span>
         </h2>
-        <p className="mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-ivory/80 sm:text-base md:text-lg">
+        <p className="mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-black sm:text-base md:text-lg font-serif">
           Together, these three forces create a holistic ecosystem of change—one that uplifts individuals, strengthens communities, and inspires the world.
         </p>
-        <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-ivory/85 sm:mt-8 sm:text-base">
-          We achieve our mission through our Bashar Art Houz a vibrant space where creativity, learning, collaboration, and purpose come together.
+        <p className="mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-black sm:mt-8 sm:text-base  md:text-lg  font-serif">
+          We achieve our mission through our 
+
+          <span className=" px-2 font-sans text-[10px] uppercase tracking-[0.25em] text-[#A07A3A] font-semibold sm:text-[15px] sm:tracking-[0.50em]">Bashar Art Houz</span>
+          a vibrant space where creativity, learning, collaboration, and purpose come together.
         </p>
         <Link
-          to="/"
-          className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold px-5 py-2.5 text-xs font-medium text-ivory transition-colors hover:bg-gold hover:text-ink sm:mt-10 sm:px-6 sm:py-3 sm:text-sm"
+          to="https://www.bashararthouz.com/"
+          className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold px-5 py-2.5 text-xs font-medium text-black transition-colors hover:bg-gold hover:text-ink sm:mt-10 sm:px-6 sm:py-3 sm:text-sm"
         >
-          Learn more about our Art Houz
+          Learn more about our Bashar Art Houz
           <ArrowRight className="h-4 w-4" />
         </Link>
       </section>

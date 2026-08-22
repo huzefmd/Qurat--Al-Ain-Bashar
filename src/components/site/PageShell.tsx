@@ -249,7 +249,7 @@ export function Prose({ children }: { children: ReactNode }) {
         mx-auto
         max-w-5xl
         px-4
-        text-left
+        text-justify
         font-serif
         text-[15px]
         leading-[1.8]
