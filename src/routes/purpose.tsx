@@ -63,7 +63,64 @@ function purpose() {
                 image={heroImg}
             />
 
-            <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+            <section className="px-6 py-12">
+                <div className="mx-auto max-w-4xl">
+
+
+                    <div className="space-y-5 text-base leading-7 text-gray-700">
+
+                        <p>
+                            Purpose Store is the creative expression of its founder,
+                            <strong> Shifa Sultana</strong> — a curated collection where her
+                            artistry, ideas, and passion for thoughtful design come together.
+                        </p>
+
+                        <p>
+                            Every piece in the store is part of Shifa Sultana’s creative journey,
+                            reflecting her exploration of art, fashion, design and craftsmanship.
+                            From wearable creations to artworks and thoughtfully crafted pieces,
+                            Purpose Store brings together her collection of work in one space —
+                            created to be experienced, appreciated and owned.
+                        </p>
+
+                        <p>
+                            But the purpose goes beyond the creation itself.
+                        </p>
+
+                        <p>
+                            A portion of the earnings from Purpose Store is contributed to the
+                            foundation, allowing Shifa Sultana’s artistry to become a source of
+                            meaningful social impact. What begins as creativity becomes
+                            contribution; what is created with purpose helps create purpose for
+                            others.
+                        </p>
+
+                        <p className="font-medium text-gray-900">
+                            Art. Expression. Purpose.
+                        </p>
+
+                        <p>
+                            Purpose Store is not simply a place to shop. It is a space where
+                            Shifa Sultana’s artistry meets a larger purpose — where every creation
+                            carries a story, and every purchase becomes part of a journey toward
+                            meaningful change.
+                        </p>
+
+                        <p className="pt-16 text-center">
+                            <strong className="text-gray-900">
+                                Explore Shifa Sultana’s Collection
+                            </strong>
+                            <br />
+                            Discover the artistry. Own a piece of the vision. Be part of the
+                            purpose.
+                        </p>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section className="px-4 py-16 sm:px-6 sm:py-6 lg:px-8 lg:py-2">
                 <div className="mx-auto max-w-7xl">
                     {/* <p className="text-xs uppercase tracking-[0.2em] text-terracotta sm:tracking-[0.3em]">We have</p>
                     <h2 className="mt-3 max-w-3xl font-display text-2xl font-light text-ink sm:text-4xl md:text-5xl">
@@ -89,7 +146,7 @@ function purpose() {
                                         </h3> */}
 
                                     </div>
-                                    
+
                                 </div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-ink/0 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                             </div>
@@ -102,5 +159,5 @@ function purpose() {
             </section>
         </PageShell>
     );
-    
+
 }
