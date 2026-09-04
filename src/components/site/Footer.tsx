@@ -12,6 +12,7 @@ const footerLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/leadership", label: "Women's Leadership" },
+  { to: "/purpose", label: "Purpose Store" },
   { to: "/model", label: "Our Model" },
   { to: "/get-involved", label: "Get Involved" },
   { to: "/gallery", label: "Our Work" },
@@ -69,6 +70,15 @@ export function Footer() {
             <p className="mt-1 font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] text-amber-400">
               The Art of Giving
             </p>
+
+            <div className="mt-2 space-y-1 text-[11px] sm:text-xs text-white/70">
+              <p>
+                📞 +91 XXXXX XXXXX
+              </p>
+              <p>
+                ✉ info@quratalaainbasharfoundation.org
+              </p>
+            </div>
           </div>
         </div>
 

@@ -67,7 +67,7 @@ function purpose() {
                 <div className="mx-auto max-w-4xl">
 
 
-                    <div className="space-y-5 text-base leading-7 text-gray-700">
+                    <div className="space-y-5 text-base leading-7 text-gray-700 font-serif">
 
                         <p>
                             Purpose Store is the creative expression of its founder,
@@ -120,13 +120,8 @@ function purpose() {
                 </div>
             </section>
 
-            <section className="px-4 py-16 sm:px-6 sm:py-6 lg:px-8 lg:py-2">
+            {/* <section className="px-4 py-16 sm:px-6 sm:py-6 lg:px-8 lg:py-2">
                 <div className="mx-auto max-w-7xl">
-                    {/* <p className="text-xs uppercase tracking-[0.2em] text-terracotta sm:tracking-[0.3em]">We have</p>
-                    <h2 className="mt-3 max-w-3xl font-display text-2xl font-light text-ink sm:text-4xl md:text-5xl">
-                        Seventeen disciplines. One shared purpose.
-                    </h2> */}
-
                     <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-14 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {categories.map((cat, i) => (
                             <div
@@ -134,16 +129,9 @@ function purpose() {
                                 className={`group relative aspect-[4/5] overflow-hidden rounded-2xl border border-border/60 bg-gradient-to-br ${tints[i % tints.length]} shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg`}
                             >
                                 <div className="absolute inset-0 flex flex-col justify-between p-5 sm:p-6">
-                                    {/* <p className="font-display text-5xl font-light text-ink/15 sm:text-6xl">
-                                        {String(i + 1).padStart(2, "0")}
-                                    </p> */}
+                                    
                                     <div>
-                                        {/* <p className="text-[10px] uppercase tracking-[0.2em] text-terracotta sm:text-[11px] sm:tracking-[0.3em]">
-                                            Category
-                                        </p>
-                                        <h3 className="mt-2 font-display text-xl leading-tight text-ink sm:text-2xl">
-                                            {cat}
-                                        </h3> */}
+                                        
 
                                     </div>
 
@@ -154,6 +142,41 @@ function purpose() {
                         <div>
 
                         </div>
+                    </div>
+                </div>
+            </section> */}
+
+
+            <section className="px-4 py-16 sm:px-6 sm:py-6 lg:px-8 lg:py-2 mb-10">
+                <div className="mx-auto max-w-7xl">
+                    <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-14 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                        {categories.map((cat, i) => (
+                            <div
+                                key={cat}
+                                className={`group relative aspect-[4/5] overflow-hidden rounded-2xl border border-border/60 bg-gradient-to-br ${tints[i % tints.length]
+                                    } shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
+                            >
+                                {/* Bottom buttons only */}
+                                <div className="absolute inset-x-5 bottom-5 z-10 flex gap-4 sm:inset-x-6 sm:bottom-6">
+                                    <button
+                                        type="button"
+                                        className="flex-1 rounded-full bg-[#A07A3A] px-4 py-3.5 text-center font-sans text-xs font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-[#8B6830] hover:shadow-md"
+                                    >
+                                        Shop Now
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        className="flex-1 rounded-full border border-[#A07A3A]/50 bg-white/70 px-4 py-3.5 text-center font-sans text-xs font-semibold uppercase tracking-[0.15em] text-[#A07A3A] backdrop-blur-sm transition-all duration-300 hover:bg-[#A07A3A] hover:text-white"
+                                    >
+                                        Explore
+                                    </button>
+                                </div>
+
+                                {/* Hover overlay */}
+                                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
