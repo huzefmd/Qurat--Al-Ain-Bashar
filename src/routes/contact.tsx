@@ -82,10 +82,15 @@ function Contact() {
               (e.target as HTMLFormElement).reset();
             }}
           >
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="pb-5">
               <Field label="Name" name="name" required />
-              <Field label="Email" name="email" type="email" required />
             </div>
+
+            <div className="grid gap-5 sm:grid-cols-2">
+              <Field label="Email" name="email" type="email" required />
+              <Field label="Phone " name="Phone " type="int " required />
+            </div>
+
             <div className="mt-5">
               <Field label="Subject" name="subject" required />
             </div>

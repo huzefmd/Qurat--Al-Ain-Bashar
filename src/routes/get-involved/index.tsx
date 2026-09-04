@@ -115,47 +115,63 @@ const otherRoles = [
 const councilMembers = [
   {
     name: "Ar. Aamina Muqaddus",
-    role: "Founding Member",
-    gender: "male" as const,
+    role: "Artist\\nFounding Member",
+    gender: "female" as const,
     description:
-      "Sarah brings 15 years of experience in NGO management and strategic planning, focusing on sustainable community development.",
+      "Ar. Aamina Muqaddus is an architect and artist whose work reflects the beautiful intersection of space, form, imagination, and artistic expression. As an artist within the foundation, Aamina Muqaddus brings her architectural perspective into the creative community, contributing ideas, artistic expression, and design thinking to projects that connect creativity with purpose.",
   },
   {
     name: "Shabana Begum",
-    role: "Founding Member",
+    role: "Altruist\\nFounding Member",
     gender: "female" as const,
     description:
-      "Omar specializes in educational initiatives and has successfully launched multiple literacy programs across rural areas.",
+      "Shabana Begum is an educator whose journey is rooted in knowledge, compassion and a deep sense of responsibility towards others.As an altruist, Shabana Begum brings a spirit of selfless service, empathy and kindness to the foundation.She believes that knowledge becomes truly meaningful when it is shared and used to make a positive difference in the lives of others.",
   },
   {
     name: "Huda Fathima",
-    role: "Founding Member",
+    role: "Athlete\\nFounding Member",
     gender: "female" as const,
     description:
-      "Leila is an award-winning artist dedicated to using visual storytelling to raise awareness for social justice.",
+      "Huda Fathima is an athlete whose journey through swimming and marathon running reflects the power of discipline, endurance and perseverance.As an athlete within the foundation, Huda Fathima represents the spirit of resilience, commitment and healthy living.Through her passion for sport, she inspires others to discover their own strength, develop discipline and approach challenges with confidence.",
   },
   {
     name: "Aisha Begum",
     role: "Founding Member",
-    gender: "male" as const,
+    gender: "female" as const,
     description:
-      "Zayn bridges the gap between the foundation and local communities, ensuring that aid reaches those who need it most.",
+      "Aisha Begum is a Founding Member of the foundation and part of the early collective that helped bring its vision to life. As a founding member, Aisha begum stands alongside the foundation’s founding team in building a community where people can share their talents, ideas and abilities for meaningful social impact.",
   },
   {
     name: "Sabiha Sultana",
     role: "Founding Member",
-    gender: "male" as const,
+    gender: "female" as const,
     description:
-      "Zayn bridges the gap between the foundation and local communities, ensuring that aid reaches those who need it most.",
+      "Sabiha Sultana is a Founding Member of the foundation and a strong believer in the limitless potential of women. As a founding member, Sabiha Sultana brings this belief into the foundation’s journey, supporting a vision where women are encouraged to dream boldly, rise with confidence and shine through their own unique talents and contributions.",
   },
   {
     name: "Sameena Sultana",
     role: "Founding Member",
-    gender: "male" as const,
+    gender: "female" as const,
     description:
-      "Zayn bridges the gap between the foundation and local communities, ensuring that aid reaches those who need it most.",
+      "Saameena Sultana is a Founding Member of the foundation, bringing together leadership, experience and a deep belief in the transformative power of education. As a founding member, Sameena Sultana brings her perspective as an educator and leader to the foundation’s vision, supporting an environment where knowledge, creativity and purpose come together to inspire positive change.",
   },
 ];
+
+const communityMembers = [
+  { name: "Zoya Ahmed", role: "Artist", gender: "female" as const, description: "A contemporary painter exploring the themes of identity and heritage." },
+  { name: "Ryan Malik", role: "Athlete", gender: "male" as const, description: "A professional sprinter dedicated to promoting youth sports." },
+  { name: "Sara Khan", role: "Altruist", gender: "female" as const, description: "Community organizer focused on urban literacy programs." },
+  { name: "Omar Farooq", role: "Creative Thinker", gender: "male" as const, description: "Strategist bridging the gap between tech and social impact." },
+  { name: "Layla Hassan", role: "Educator", gender: "female" as const, description: "Passionate about inclusive pedagogy and early childhood education." },
+  { name: "Amir Raza", role: "Mentor", gender: "male" as const, description: "Guiding young entrepreneurs in the social enterprise space." },
+  { name: "Nora Qureshi", role: "Volunteer", gender: "female" as const, description: "Leading grassroots efforts for environmental sustainability." },
+  { name: "Zainab Noor", role: "Artist", gender: "female" as const, description: "Digital artist focused on social justice narratives." },
+  { name: "Hamza Ali", role: "Athlete", gender: "male" as const, description: "Martial arts expert advocating for mental discipline." },
+  { name: "Fatima Zahra", role: "Altruist", gender: "female" as const, description: "Healthcare professional volunteering in rural clinics." },
+  { name: "Bilal Saeed", role: "Partner", gender: "male" as const, description: "Corporate lead fostering CSR initiatives for local NGOs." },
+  { name: "Mariam Aziz", role: "Creative Thinker", gender: "female" as const, description: "Designer creating accessible tools for disabled artists." },
+];
+
 
 /* -------------------------------------------------------------------------- */
 /*                         COUNCIL MEMBER CARD                                */
@@ -181,41 +197,48 @@ function CouncilMemberCard({
       onClick={() => description && setIsExpanded((value) => !value)}
       className={`
         group relative flex w-full flex-col items-center
-        rounded-3xl border text-center
+        rounded-[2rem] border text-center
         transition-all duration-500 ease-out
         ${isRoot
           ? `
               max-w-sm
-              border-terracotta/50
-              bg-card
-              px-7 py-8
-              shadow-[0_20px_60px_-20px_rgba(120,70,45,0.28)]
-              ring-1 ring-terracotta/10
-              hover:-translate-y-1
-              hover:shadow-[0_25px_70px_-20px_rgba(120,70,45,0.35)]
+              border-terracotta/40
+              bg-gradient-to-b from-card to-cream/20
+              px-8 py-10
+              shadow-[0_20px_50px_-12px_rgba(120,70,45,0.3)]
+              ring-1 ring-terracotta/20
+              hover:-translate-y-2
+              hover:shadow-[0_30px_60px_-12px_rgba(120,70,45,0.4)]
             `
           : `
-              max-w-[270px]
+              max-w-[280px]
               cursor-pointer
-              border-border/60
-              bg-card/95
-              px-6 py-7
-              shadow-[0_10px_35px_-18px_rgba(0,0,0,0.25)]
+              border-border/40
+              bg-card/80 backdrop-blur-sm
+              px-7 py-8
+              shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]
               hover:-translate-y-2
-              hover:border-terracotta/60
-              hover:shadow-[0_20px_45px_-18px_rgba(120,70,45,0.3)]
+              hover:border-terracotta/40
+              hover:shadow-[0_20px_40px_-15px_rgba(120,70,45,0.2)]
             `
         }
       `}
     >
+      {/* Glow effect on hover */}
+      <div className={`
+        absolute -inset-px rounded-[2rem] opacity-0 transition-opacity duration-500
+        group-hover:opacity-100 pointer-events-none
+        ${isRoot ? 'bg-gradient-to-tr from-terracotta/20 via-transparent to-terracotta/20' : 'bg-gradient-to-tr from-terracotta/10 via-transparent to-terracotta/10'}
+      `} />
+
       {/* Decorative corner */}
       <div
         className={`
           pointer-events-none absolute right-4 top-4 h-8 w-8
           rounded-tr-2xl border-r border-t
           ${isRoot
-            ? "border-terracotta/30"
-            : "border-terracotta/15 group-hover:border-terracotta/35"
+            ? "border-terracotta/40"
+            : "border-terracotta/20 group-hover:border-terracotta/40"
           }
         `}
       />
@@ -225,8 +248,8 @@ function CouncilMemberCard({
           pointer-events-none absolute bottom-4 left-4 h-8 w-8
           rounded-bl-2xl border-b border-l
           ${isRoot
-            ? "border-terracotta/30"
-            : "border-terracotta/15 group-hover:border-terracotta/35"
+            ? "border-terracotta/40"
+            : "border-terracotta/20 group-hover:border-terracotta/40"
           }
         `}
       />
@@ -234,20 +257,20 @@ function CouncilMemberCard({
       {/* Profile circle */}
       <div
         className={`
-          relative mb-5 grid place-items-center rounded-full
+          relative mb-6 grid place-items-center rounded-full
           transition-all duration-500
           ${isRoot
-            ? "h-24 w-24 bg-terracotta text-ivory shadow-lg shadow-terracotta/20 ring-8 ring-terracotta/10 group-hover:scale-105"
+            ? "h-28 w-28 bg-terracotta text-ivory shadow-xl shadow-terracotta/30 ring-8 ring-terracotta/10 group-hover:scale-105 group-hover:ring-terracotta/20"
             : gender === "female"
-              ? "h-16 w-16 bg-pink-50 text-pink-600 ring-4 ring-pink-100 group-hover:scale-110"
-              : "h-16 w-16 bg-blue-50 text-blue-600 ring-4 ring-blue-100 group-hover:scale-110"
+              ? "h-20 w-20 bg-pink-50 text-pink-600 ring-4 ring-pink-100 group-hover:scale-110 group-hover:ring-pink-200"
+              : "h-20 w-20 bg-blue-50 text-blue-600 ring-4 ring-blue-100 group-hover:scale-110 group-hover:ring-blue-200"
           }
         `}
       >
         {isRoot ? (
-          <Crown className="h-10 w-10" strokeWidth={1.6} />
+          <User className="h-12 w-12" strokeWidth={1.5} />
         ) : (
-          <User className="h-7 w-7" strokeWidth={1.7} />
+          <User className="h-9 w-9" strokeWidth={1.6} />
         )}
 
         {description && !isRoot && (
@@ -271,16 +294,6 @@ function CouncilMemberCard({
         )}
       </div>
 
-      {/* Founder label */}
-      {isRoot && (
-        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-terracotta/20 bg-terracotta/5 px-3 py-1">
-          <Star className="h-3 w-3 fill-current text-terracotta" />
-          <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-terracotta">
-            Founder
-          </span>
-        </div>
-      )}
-
       {/* Name */}
       <p
         className={`
@@ -288,8 +301,8 @@ function CouncilMemberCard({
           transition-colors duration-300
           group-hover:text-terracotta
           ${isRoot
-            ? "text-2xl font-bold sm:text-3xl"
-            : "text-lg font-semibold sm:text-xl"
+            ? "text-2xl font-bold sm:text-3xl tracking-tight"
+            : "text-lg font-semibold sm:text-xl tracking-tight"
           }
         `}
       >
@@ -297,35 +310,26 @@ function CouncilMemberCard({
       </p>
 
       {/* Role */}
-      {!isRoot && (
-        <div className="mt-2 flex items-center gap-2">
-          <span className="h-px w-5 bg-terracotta/30" />
-
-          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-ink/45">
+      <div className="mt-3 flex flex-col items-center gap-2">
+        <div className="flex items-center gap-2">
+          <span className="h-px w-4 bg-terracotta/30" />
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-ink/50 group-hover:text-ink/70 transition-colors whitespace-pre-line leading-relaxed">
             {role}
           </p>
-
-          <span className="h-px w-5 bg-terracotta/30" />
+          <span className="h-px w-4 bg-terracotta/30" />
         </div>
-      )}
-
-      {/* Founder subtitle */}
-      {/* {isRoot && (
-        <p className="mt-2 text-sm uppercase tracking-[0.18em] text-ink/50">
-          Qurat-Al-Ain Bashar Foundation
-        </p>
-      )} */}
+      </div>
 
       {/* Expand hint */}
       {description && !isRoot && (
         <p
           className={`
-            mt-4 text-[9px] font-medium uppercase tracking-[0.2em]
-            transition-opacity duration-300
-            ${isExpanded ? "opacity-0" : "text-terracotta/60 opacity-100"}
+            mt-5 text-[9px] font-semibold uppercase tracking-[0.25em]
+            transition-all duration-300
+            ${isExpanded ? "opacity-0 translate-y-2" : "text-terracotta/60 opacity-100"}
           `}
         >
-          Click to learn more
+          Click Here
         </p>
       )}
 
@@ -335,14 +339,14 @@ function CouncilMemberCard({
           className={`
             grid w-full transition-all duration-500 ease-in-out
             ${isExpanded
-              ? "mt-5 grid-rows-[1fr] opacity-100"
+              ? "mt-6 grid-rows-[1fr] opacity-100"
               : "mt-0 grid-rows-[0fr] opacity-0"
             }
           `}
         >
           <div className="overflow-hidden">
             <div className="border-t border-terracotta/10 pt-4">
-              <p className="text-sm leading-relaxed text-ink/65">
+              <p className="text-sm leading-relaxed text-ink/70 italic">
                 {description}
               </p>
             </div>
@@ -404,7 +408,7 @@ function GetInvolved() {
   const secondLevel = councilMembers.slice(3, 6);
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       {/* ------------------------------------------------------------------ */}
       {/* HERO                                                               */}
       {/* ------------------------------------------------------------------ */}
@@ -485,10 +489,10 @@ function GetInvolved() {
             <div className="flex flex-col items-center">
               <CouncilMemberCard
                 name="Shifa Sultana"
-                role="Founder"
                 gender="female"
+                role="Founder"
                 isRoot
-                description="Visionary leader and founder of the Qurat-Al-Ain Bashar Foundation, dedicated to global empowerment and sustainable impact."
+                description={`Shifa Sultana is an educator, Zoologist, creative thinker and founder with academic backgrounds in Science and Education, holding a B.Sc., M.Sc. and B.Ed., Shifa believes that education extends far beyond classrooms and textbooks.\\n\\nThrough her creative work and initiatives, Shifa Sultana brings together her different passions—education, artistry, design and social purpose—creating spaces where people can learn, create, participate and contribute.`}
               />
 
               {/* Mobile connector */}
@@ -544,16 +548,36 @@ function GetInvolved() {
               ))}
             </div>
 
-            {/* Tree ending */}
-            <div className="mt-10 flex justify-center">
-              <div className="flex items-center gap-3 rounded-full border border-terracotta/15 bg-card/70 px-4 py-2 shadow-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
+            {/* Community Members Section */}
+            <div className="mt-32 text-center">
+              <div className="mb-12 flex flex-col items-center justify-center gap-3">
+                <div className="flex items-center gap-3">
+                  <span className="h-px w-10 bg-terracotta/30 sm:w-16" />
+                  <Users className="h-5 w-5 text-terracotta" />
+                  <span className="h-px w-10 bg-terracotta/30 sm:w-16" />
+                </div>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-terracotta">
+                  Our Growing Circle
+                </p>
+                <h3 className="font-display text-3xl text-ink sm:text-4xl">
+                  Community Members
+                </h3>
+                <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-ink/55 sm:text-base">
+                  The passionate individuals who bring their unique skills and heart to the foundation's mission.
+                </p>
+              </div>
 
-                <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-ink/45">
-                  Founding Leadership
-                </span>
-
-                <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                {communityMembers.map((member) => (
+                  <div key={member.name} className="flex justify-center">
+                    <CouncilMemberCard
+                      name={member.name}
+                      role={member.role}
+                      gender={member.gender}
+                      description={member.description}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -672,7 +696,7 @@ function GetInvolved() {
           {/* Contact / Apply Button */}
           <div className="mt-12 text-center sm:mt-14">
             <Link
-              to="/contact"
+              to="/get-involved/apply"
               className="
                 group inline-flex items-center gap-2
                 rounded-full
@@ -695,6 +719,6 @@ function GetInvolved() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

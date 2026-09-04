@@ -19,6 +19,7 @@ import { Route as ModelRouteImport } from './routes/model'
 import { Route as PurposeRouteImport } from './routes/purpose'
 import { Route as GetInvolvedIndexRouteImport } from './routes/get-involved/index'
 import { Route as GetInvolvedAltruistRouteImport } from './routes/get-involved/altruist'
+import { Route as GetInvolvedApplyRouteImport } from './routes/get-involved/apply'
 import { Route as GetInvolvedArtistRouteImport } from './routes/get-involved/artist'
 import { Route as GetInvolvedAthleteRouteImport } from './routes/get-involved/athlete'
 
@@ -72,6 +73,11 @@ const GetInvolvedAltruistRoute = GetInvolvedAltruistRouteImport.update({
   path: '/altruist',
   getParentRoute: () => GetInvolvedRouteRoute,
 } as any)
+const GetInvolvedApplyRoute = GetInvolvedApplyRouteImport.update({
+  id: '/apply',
+  path: '/apply',
+  getParentRoute: () => GetInvolvedRouteRoute,
+} as any)
 const GetInvolvedArtistRoute = GetInvolvedArtistRouteImport.update({
   id: '/artist',
   path: '/artist',
@@ -93,6 +99,7 @@ export interface FileRoutesByFullPath {
   '/model': typeof ModelRoute
   '/purpose': typeof PurposeRoute
   '/get-involved/altruist': typeof GetInvolvedAltruistRoute
+  '/get-involved/apply': typeof GetInvolvedApplyRoute
   '/get-involved/artist': typeof GetInvolvedArtistRoute
   '/get-involved/athlete': typeof GetInvolvedAthleteRoute
   '/get-involved/': typeof GetInvolvedIndexRoute
@@ -106,6 +113,7 @@ export interface FileRoutesByTo {
   '/model': typeof ModelRoute
   '/purpose': typeof PurposeRoute
   '/get-involved/altruist': typeof GetInvolvedAltruistRoute
+  '/get-involved/apply': typeof GetInvolvedApplyRoute
   '/get-involved/artist': typeof GetInvolvedArtistRoute
   '/get-involved/athlete': typeof GetInvolvedAthleteRoute
   '/get-involved': typeof GetInvolvedIndexRoute
@@ -121,6 +129,7 @@ export interface FileRoutesById {
   '/model': typeof ModelRoute
   '/purpose': typeof PurposeRoute
   '/get-involved/altruist': typeof GetInvolvedAltruistRoute
+  '/get-involved/apply': typeof GetInvolvedApplyRoute
   '/get-involved/artist': typeof GetInvolvedArtistRoute
   '/get-involved/athlete': typeof GetInvolvedAthleteRoute
   '/get-involved/': typeof GetInvolvedIndexRoute
@@ -137,6 +146,7 @@ export interface FileRouteTypes {
     | '/model'
     | '/purpose'
     | '/get-involved/altruist'
+    | '/get-involved/apply'
     | '/get-involved/artist'
     | '/get-involved/athlete'
     | '/get-involved/'
@@ -150,6 +160,7 @@ export interface FileRouteTypes {
     | '/model'
     | '/purpose'
     | '/get-involved/altruist'
+    | '/get-involved/apply'
     | '/get-involved/artist'
     | '/get-involved/athlete'
     | '/get-involved'
@@ -164,6 +175,7 @@ export interface FileRouteTypes {
     | '/model'
     | '/purpose'
     | '/get-involved/altruist'
+    | '/get-involved/apply'
     | '/get-involved/artist'
     | '/get-involved/athlete'
     | '/get-involved/'
@@ -252,6 +264,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GetInvolvedAltruistRouteImport
       parentRoute: typeof GetInvolvedRouteRoute
     }
+    '/get-involved/apply': {
+      id: '/get-involved/apply'
+      path: '/apply'
+      fullPath: '/get-involved/apply'
+      preLoaderRoute: typeof GetInvolvedApplyRouteImport
+      parentRoute: typeof GetInvolvedRouteRoute
+    }
     '/get-involved/artist': {
       id: '/get-involved/artist'
       path: '/artist'
@@ -271,6 +290,7 @@ declare module '@tanstack/react-router' {
 
 interface GetInvolvedRouteRouteChildren {
   GetInvolvedAltruistRoute: typeof GetInvolvedAltruistRoute
+  GetInvolvedApplyRoute: typeof GetInvolvedApplyRoute
   GetInvolvedArtistRoute: typeof GetInvolvedArtistRoute
   GetInvolvedAthleteRoute: typeof GetInvolvedAthleteRoute
   GetInvolvedIndexRoute: typeof GetInvolvedIndexRoute
@@ -278,6 +298,7 @@ interface GetInvolvedRouteRouteChildren {
 
 const GetInvolvedRouteRouteChildren: GetInvolvedRouteRouteChildren = {
   GetInvolvedAltruistRoute: GetInvolvedAltruistRoute,
+  GetInvolvedApplyRoute: GetInvolvedApplyRoute,
   GetInvolvedArtistRoute: GetInvolvedArtistRoute,
   GetInvolvedAthleteRoute: GetInvolvedAthleteRoute,
   GetInvolvedIndexRoute: GetInvolvedIndexRoute,

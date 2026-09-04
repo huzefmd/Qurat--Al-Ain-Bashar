@@ -1,4 +1,10 @@
-import { Palette, Dumbbell, HandHeart, type LucideIcon } from "lucide-react";
+import {
+  Palette,
+  Dumbbell,
+  HandHeart,
+  User,
+  type LucideIcon,
+} from "lucide-react";
 
 export type RoleField = {
   name: string;
@@ -9,7 +15,7 @@ export type RoleField = {
 };
 
 export type Role = {
-  key: "artist" | "athlete" | "altruist";
+  key: string;
   label: string;
   Icon: LucideIcon;
   to: string;
@@ -17,7 +23,7 @@ export type Role = {
   fields: RoleField[];
 };
 
-export const roles: Record<Role["key"], Role> = {
+export const roles: Record<string, Role> = {
   artist: {
     key: "artist",
     label: "Artist",
@@ -81,6 +87,26 @@ export const roles: Record<Role["key"], Role> = {
       },
       { name: "availability", label: "Availability (hours per week)", type: "text", required: false },
       { name: "message", label: "Tell us about your experience", type: "textarea", required: true },
+    ],
+  },
+  general: {
+    key: "general",
+    label: "General Application",
+    Icon: User,
+    to: "/get-involved/apply",
+    blurb: "Join us in any capacity where your skills can make a difference.",
+    fields: [
+      { name: "name", label: "Full Name", type: "text", required: true },
+      { name: "email", label: "Email", type: "email", required: true },
+      { name: "phone", label: "Phone", type: "tel", required: false },
+      {
+        name: "role",
+        label: "Interested Role",
+        type: "select",
+        required: true,
+        options: ["Educator", "Creative Thinker", "Volunteer", "Mentor", "Partner", "Other"],
+      },
+      { name: "message", label: "How would you like to contribute?", type: "textarea", required: true },
     ],
   },
 };
