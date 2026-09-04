@@ -84,45 +84,23 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-ivory/40 via-transparent to-ivory/80 sm:from-ivory/10 sm:via-transparent sm:to-ivory/70" />
         <div className="relative mx-auto flex min-h-[90vh] sm:min-h-[92vh] max-w-7xl flex-col justify-center px-5 pt-28 pb-20 sm:px-8 sm:pt-32 sm:pb-24 lg:px-8">
           <div className="max-w-2xl">
-
-
             <div
               className="mt-2 font-cinzel text-[11px] sm:text-base md:text-2xl uppercase tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.35em] text-ink/80 font-semibold animate-fade-up "
               style={{ animationDelay: "100ms" }}
             >
               <div>Qurat-Al-Ain Bashar</div>
 
-              <div className="mt-2 sm:mt-3 tracking-[0.2em] sm:tracking-[0.4em] md:tracking-[0.5em] text-base sm:text-xl md:text-3xl text-[#C8A086]">
+              <div className="mt-2  ml-2 sm:mt-3 tracking-[0.2em] sm:tracking-[0.4em] md:tracking-[0.8em] text-base sm:text-xl md:text-3xl text-[#C8A086]">
                 Foundation
               </div>
             </div>
-
-            {/* Headline */}
-            {/* <h1
-              className="mt-5   px-40 font-serif text-[44px] leading-[1.05] tracking-[-0.01em] text-[#C8A086] sm:text-xl md:text-[23px] md:leading-[1.02] animate-fade-up"
-              style={{ animationDelay: "150ms" }}
-            >
-              The <span className="italic font-light text-[#C8A086]">art</span> of
-              giving
-            </h1> */}
-
-            {/* Italic accent line */}
-            {/* <div
-              className="mt-7 flex items-center gap-4 animate-fade-up"
-              style={{ animationDelay: "250ms" }}
-            >
-              <span className="h-px w-14 bg-ink/60" />
-              <p className="font-script text-2xl text-ink sm:text-3xl">
-                Together, we create lasting change.
-              </p>
-            </div> */}
-
-            {/* Body */}
             <p
               className="mt-6 max-w-xl font-serif text-[15px] leading-[1.85] text-ink/85 sm:text-[16px] sm:leading-[1.9] md:max-w-xl md:text-[17px] animate-fade-up"
               style={{ animationDelay: "350ms" }}
             >
-              A women-led NGO that transforms the Art of Giving into a purposeful movement, expressed through the transformative pillars—Art, Athleticism, and Altruism—where talent inspires, passion empowers, and compassion creates lasting change.
+              A women-led NGO that transforms the Art of Giving into a purposeful movement,
+              expressed through the transformative pillars—Art, Athleticism, and Altruism—where
+              talent inspires, passion empowers, and compassion creates lasting change.
             </p>
 
             {/* CTAs */}
@@ -135,22 +113,20 @@ function Home() {
                 className="group inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-ivory transition-all duration-300 hover:bg-[#1a1410] hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.35)] sm:px-7 sm:py-3.5 sm:text-[12px] sm:tracking-[0.25em]"
               >
                 Discover Our Story
-                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
               </Link>
               <Link
                 to="/get-involved"
                 className="group inline-flex items-center gap-2 rounded-full border border-ink/20 bg-transparent px-5 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-all duration-300 hover:border-[#C8A062] hover:text-[#A07A3A] sm:px-7 sm:py-3.5 sm:text-[12px] sm:tracking-[0.25em]"
               >
                 Get Involved
-                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
               </Link>
             </div>
-
-            {/* Scroll indicator */}
-            {/* <div className="mt-16 hidden items-center gap-3 text-ink/40 sm:flex">
-              <div className="h-8 w-px bg-ink/30" />
-              <span className="font-sans text-[10px] uppercase tracking-[0.4em]">Scroll</span>
-            </div> */}
           </div>
         </div>
       </section>
@@ -165,18 +141,6 @@ function Home() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="mx-auto max-w-2xl text-center"
         >
-          {/* <p className="font-serif text-[20px] uppercase tracking-[0.5em] text-[#C8A062]">
-            Our Pillars
-          </p> */}
-          {/* <h2 className="mt-5 font-serif text-4xl leading-[1.1] text-ink sm:text-5xl">
-            A craft of giving,
-            <br className="hidden sm:block" /> built on three quiet pillars.
-          </h2> */}
-          {/* <div className="mx-auto mt-7 flex items-center justify-center">
-            <div className="h-px w-16 bg-[#C8A062]/60" />
-            <div className="mx-3 h-1.5 w-1.5 rotate-45 border border-[#C8A062]/70" />
-            <div className="h-px w-16 bg-[#C8A062]/60" />
-          </div> */}
         </motion.div>
 
         <motion.div
@@ -210,22 +174,21 @@ function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-50/0 via-white/0 to-orange-50/0 transition-all duration-700 group-hover:from-amber-50/80 group-hover:via-white/60 group-hover:to-orange-50/60" />
 
                 {/* Number marker */}
-                <span className="absolute right-6 top-6 font-serif text-sm italic text-ink/15 transition-colors duration-500 group-hover:text-[#C8A062]/60">
-                  0{pillars.indexOf(p) + 1}
-                </span>
+
 
                 {/* Icon */}
                 <div className="relative z-10 mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#C8A062]/30 bg-ivory transition-all duration-500 group-hover:border-[#C8A062] group-hover:bg-[#C8A062]/10">
-                  <Icon className="h-7 w-7 text-[#A07A3A] transition-transform duration-500 group-hover:scale-110" strokeWidth={1.5} />
+                  <Icon
+                    className="h-7 w-7 text-[#A07A3A] transition-transform duration-500 group-hover:scale-110"
+                    strokeWidth={1.5}
+                  />
                 </div>
 
                 {/* Hairline divider */}
                 <div className="relative z-10 mx-auto mt-6 h-px w-10 bg-[#C8A062]/40 transition-all duration-500 group-hover:w-16" />
 
                 {/* Title */}
-                <h3 className="relative z-10 mt-5 font-serif text-2xl text-ink">
-                  {p.title}
-                </h3>
+                <h3 className="relative z-10 mt-5 font-serif text-2xl text-ink">{p.title}</h3>
 
                 {/* Description */}
                 <p className="relative z-10 mt-4 font-sans text-[14px] leading-7 text-ink/65">
@@ -239,7 +202,9 @@ function Home() {
                     className="inline-flex items-center gap-2 font-sans text-[11px] font-medium uppercase tracking-[0.3em] text-ink/70 transition-colors duration-300 group-hover:text-[#A07A3A]"
                   >
                     Learn more
-                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
                   </Link>
                 </div>
               </motion.div>
