@@ -1,6 +1,18 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Twitter } from "lucide-react";
+import { Instagram, Facebook, Twitter ,Whatsapp } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { Phone } from "lucide-react";
+
+import { SiGmail } from "react-icons/si";
+
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaWhatsapp,
+  FaXTwitter,
+} from "react-icons/fa6";
+
+import { Mail } from "lucide-react";
 
 const WhatsApp = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props} aria-label="WhatsApp">
@@ -20,10 +32,26 @@ const footerLinks = [
 ];
 
 const socials = [
-  { icon: Instagram, href: "https://www.instagram.com/quratalainbasharfoundation/?hl=en", label: "Instagram" },
-  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-  { icon: WhatsApp, href: "https://wa.me/", label: "WhatsApp" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  {
+    icon: FaInstagram,
+    href: "https://www.instagram.com/quratalainbasharfoundation?stkn=MXFrem5scXBjbnc0Zw%3D%3D",
+    label: "Instagram",
+  },
+  {
+    icon: FaFacebookF,
+    href: "https://www.instagram.com/quratalainbasharfoundation?stkn=MXFrem5scXBjbnc0Zw%3D%3D",
+    label: "Facebook",
+  },
+  {
+    icon: FaWhatsapp,
+    href: "https://wa.me/919740725637",
+    label: "WhatsApp",
+  },
+  {
+    icon: FaXTwitter,
+    href: "https://www.instagram.com/quratalainbasharfoundation?stkn=MXFrem5scXBjbnc0Zw%3D%3D",
+    label: "X",
+  },
 ];
 
 type SocialsProps = {
@@ -71,14 +99,18 @@ export function Footer() {
               The Art of Giving
             </p>
 
-            <div className="mt-2 space-y-1 text-[11px] sm:text-xs text-white/70">
-              <p>
-                📞 +91 XXXXX XXXXX
+            <div className="mt-2 text-[11px] sm:text-xs text-white/70">
+              <p className="flex items-center gap-2 whitespace-nowrap">
+                <Phone className="w-3 h-3 shrink-0 text-white" />
+                <span>+91 9740725637</span>
               </p>
-              <p>
-                ✉ info@quratalaainbasharfoundation.org
+
+              <p className="flex items-center gap-2 whitespace-nowrap">
+                <SiGmail className="w-3 h-3 shrink-0" />
+                <span> quratalainbasharfoundation@gmail.com</span>
               </p>
             </div>
+
           </div>
         </div>
 
@@ -115,8 +147,7 @@ export function Footer() {
       {/* Bottom */}
       <div className="relative border-t border-white/10">
         <p className="px-5 py-5 text-center font-cinzel text-[11px] sm:text-xs tracking-wide text-stone-500">
-          © {new Date().getFullYear()} Qurat-Al-Ain Bashar Foundation ·
-          Empowering Lives · Inspiring Futures
+          Qurat-Al-Ain Bashar Foundation 
         </p>
       </div>
     </footer>

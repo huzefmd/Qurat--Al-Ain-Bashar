@@ -70,7 +70,7 @@ function FormField({ field }: { field: RoleField }) {
   );
 }
 
-export function RoleApplicationForm({ role }: { role: Role }) {
+export function   RoleApplicationForm({ role }: { role: Role }) {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

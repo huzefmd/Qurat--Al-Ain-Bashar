@@ -67,7 +67,7 @@ function purpose() {
                 <div className="mx-auto max-w-4xl">
 
 
-                    <div className="space-y-5 text-base leading-7 text-gray-700 font-serif">
+                    <div className="space-y-5  text-[15px] text-ink/85 font-serif  md:text-[17px] sm:text-[16px]  text-justify">
 
                         <p>
                             Purpose Store is the creative expression of its founder,
@@ -157,20 +157,48 @@ function purpose() {
                                     } shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
                             >
                                 {/* Bottom buttons only */}
-                                <div className="absolute inset-x-5 bottom-5 z-10 flex gap-4 sm:inset-x-6 sm:bottom-6">
-                                    <button
-                                        type="button"
-                                        className="flex-1 rounded-full bg-[#A07A3A] px-4 py-3.5 text-center font-sans text-xs font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-[#8B6830] hover:shadow-md"
+                                <div className="absolute inset-x-5 bottom-5 z-10 flex gap-3 sm:inset-x-6 sm:bottom-6">
+                                    {/* WhatsApp / Shop Now */}
+                                    <a
+                                        href="https://wa.me/919740725637"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group flex flex-1 items-center justify-center gap-2 rounded-full
+               bg-[#A07A3A] px-4 py-3.5
+               font-sans text-xs font-semibold uppercase tracking-[0.15em]
+               text-white shadow-lg shadow-black/10
+               transition-all duration-300
+               hover:-translate-y-0.5 hover:bg-[#8B6830]
+               hover:shadow-xl hover:shadow-[#A07A3A]/25
+               active:translate-y-0"
                                     >
-                                        Shop Now
-                                    </button>
+                                        <span>Shop Now</span>
+                                        <span className="text-sm transition-transform duration-300 group-hover:translate-x-1">
+                                            →
+                                        </span>
+                                    </a>
 
-                                    <button
-                                        type="button"
-                                        className="flex-1 rounded-full border border-[#A07A3A]/50 bg-white/70 px-4 py-3.5 text-center font-sans text-xs font-semibold uppercase tracking-[0.15em] text-[#A07A3A] backdrop-blur-sm transition-all duration-300 hover:bg-[#A07A3A] hover:text-white"
+                                    {/* Instagram / Explore */}
+                                    <a
+                                        href="https://www.instagram.com/quratalainbasharfoundation?stkn=MXFrem5scXBjbnc0Zw%3D%3D"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group flex flex-1 items-center justify-center gap-2 rounded-full
+               border border-[#A07A3A]/40 bg-white/80 px-4 py-3.5
+               font-sans text-xs font-semibold uppercase tracking-[0.15em]
+               text-[#A07A3A] shadow-lg shadow-black/5
+               backdrop-blur-md
+               transition-all duration-300
+               hover:-translate-y-0.5 hover:border-[#A07A3A]
+               hover:bg-[#A07A3A] hover:text-white
+               hover:shadow-xl hover:shadow-[#A07A3A]/20
+               active:translate-y-0"
                                     >
-                                        Explore
-                                    </button>
+                                        <span>Explore</span>
+                                        <span className="text-sm transition-transform duration-300 group-hover:translate-x-1">
+                                            ↗
+                                        </span>
+                                    </a>
                                 </div>
 
                                 {/* Hover overlay */}

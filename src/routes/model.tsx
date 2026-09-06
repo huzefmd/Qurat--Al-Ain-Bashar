@@ -168,7 +168,7 @@ function Model() {
               Artists, athletes, and altruists collaborate with our organization by practicing and showcasing their respective talents and professions. They generate income through activities such as performances, workshops, coaching, exhibitions, training programs, consulting, creative services, and other professional engagements.
             </p>
             <p>
-              A mutually agreed portion of their earnings is voluntarily contributed to the NGO. These contributions fund our humanitarian projects, women's empowerment initiatives, educational programs, and community welfare activities. This creates a sustainable cycle where talent fuels social impact.
+              A mutually agreed portion of their earnings is voluntarily contributed to the Foundation. These contributions fund our humanitarian projects, women's empowerment initiatives, educational programs, and community welfare activities. This creates a sustainable cycle where talent fuels social impact.
             </p>
           </div>
 
@@ -223,7 +223,7 @@ function Model() {
       </section>
 
       <div className="text-center text-2xl font-serif font-medium mt-15">
-        <p className="pt-2">Here's how our NGO achieves its mission</p>
+        <p className="pt-2">Here's how our Foundation achieves its mission</p>
       </div>
 
       {/* <Pillar eyebrow="Creativity that Inspires" title="Art" image={artImg}>
@@ -234,7 +234,7 @@ function Model() {
           Through exhibitions, performances, workshops, design, music, theatre, literature, photography, digital media, and other creative services, artists create both cultural and economic value.
         </p>
         <p>
-          At the heart of our NGO lies the belief that creativity has the power to transform challenges into opportunities for positive change. One of the most impactful ways we bring this vision to life is through sustainable art and design initiatives led by artists and creative thinkers from diverse backgrounds.
+          At the heart of our Foundation lies the belief that creativity has the power to transform challenges into opportunities for positive change. One of the most impactful ways we bring this vision to life is through sustainable art and design initiatives led by artists and creative thinkers from diverse backgrounds.
         </p>
         <p>We empower artists to use their talents to create meaningful social impact by:</p>
 
@@ -311,7 +311,7 @@ function Model() {
         </p>
 
         <p>
-          At the heart of our NGO lies the belief that creativity has the power to
+          At the heart of our Foundation lies the belief that creativity has the power to
           transform challenges into opportunities for positive change. One of the
           most impactful ways we bring this vision to life is through sustainable art
           and design initiatives led by artists and creative thinkers from diverse
@@ -466,7 +466,7 @@ function Model() {
           By uniting passion for sports with community service, athleticism becomes a vehicle for inspiration, discipline, and opportunity.
         </p>
         <p>
-          Athletes are more than role models—they are agents of empowerment and community transformation. At our NGO, we bring together athletes from diverse sports backgrounds—football, basketball, athletics, martial arts, swimming, yoga, and more—who dedicate their skills and passion to serve underprivileged communities.
+          Athletes are more than role models—they are agents of empowerment and community transformation. At our Foundation, we bring together athletes from diverse sports backgrounds—football, basketball, athletics, martial arts, swimming, yoga, and more—who dedicate their skills and passion to serve underprivileged communities.
         </p>
         <p>Through their involvement, we achieve multiple layers of impact:</p>
 
@@ -489,7 +489,7 @@ function Model() {
       <div className="mt-2 mx-auto max-w-3xl text-center">
 
         <p className="mx-auto max-w-3xl font-serif text-[15px] leading-8 text-ink/80 sm:text-base sm:leading-9">
-          By channeling their physical skills, mental resilience, and passion for service, athletes in our NGO help transform sports into a powerful tool for social upliftment, bridging gaps, inspiring hope, and nurturing talent in communities that need it most.
+          By channeling their physical skills, mental resilience, and passion for service, athletes in our Foundation help transform sports into a powerful tool for social upliftment, bridging gaps, inspiring hope, and nurturing talent in communities that need it most.
         </p>
         <p className="mx-auto my-10 max-w-3xl font-serif text-[15px] leading-8 text-ink/80 sm:text-base sm:leading-9">
           At our foundation, every training session, every lesson, every competition, and every act of mentorship becomes an opportunity to inspire confidence, strengthen communities, and create lasting social impact.

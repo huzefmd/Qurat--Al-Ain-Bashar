@@ -115,25 +115,27 @@ const otherRoles = [
 const councilMembers = [
   {
     name: "Ar. Aamina Muqaddus",
-    role: "Artist\\nFounding Member",
+    role: "Artist \n Founding Member",
     gender: "female" as const,
     description:
       "Ar. Aamina Muqaddus is an architect and artist whose work reflects the beautiful intersection of space, form, imagination, and artistic expression. As an artist within the foundation, Aamina Muqaddus brings her architectural perspective into the creative community, contributing ideas, artistic expression, and design thinking to projects that connect creativity with purpose.",
   },
-  {
-    name: "Shabana Begum",
-    role: "Altruist\\nFounding Member",
-    gender: "female" as const,
-    description:
-      "Shabana Begum is an educator whose journey is rooted in knowledge, compassion and a deep sense of responsibility towards others.As an altruist, Shabana Begum brings a spirit of selfless service, empathy and kindness to the foundation.She believes that knowledge becomes truly meaningful when it is shared and used to make a positive difference in the lives of others.",
-  },
+
   {
     name: "Huda Fathima",
-    role: "Athlete\\nFounding Member",
+    role: "Athlete \n Founding Member",
     gender: "female" as const,
     description:
       "Huda Fathima is an athlete whose journey through swimming and marathon running reflects the power of discipline, endurance and perseverance.As an athlete within the foundation, Huda Fathima represents the spirit of resilience, commitment and healthy living.Through her passion for sport, she inspires others to discover their own strength, develop discipline and approach challenges with confidence.",
   },
+  {
+    name: "Shabana Begum",
+    role: "Altruist \n Founding Member",
+    gender: "female" as const,
+    description:
+      "Shabana Begum is an educator whose journey is rooted in knowledge, compassion and a deep sense of responsibility towards others.As an altruist, Shabana Begum brings a spirit of selfless service, empathy and kindness to the foundation.She believes that knowledge becomes truly meaningful when it is shared and used to make a positive difference in the lives of others.",
+  },
+
   {
     name: "Aisha Begum",
     role: "Founding Member",
@@ -158,18 +160,19 @@ const councilMembers = [
 ];
 
 const communityMembers = [
-  { name: "Zoya Ahmed", role: "Artist", gender: "female" as const, description: "A contemporary painter exploring the themes of identity and heritage." },
-  { name: "Ryan Malik", role: "Athlete", gender: "male" as const, description: "A professional sprinter dedicated to promoting youth sports." },
-  { name: "Sara Khan", role: "Altruist", gender: "female" as const, description: "Community organizer focused on urban literacy programs." },
-  { name: "Omar Farooq", role: "Creative Thinker", gender: "male" as const, description: "Strategist bridging the gap between tech and social impact." },
-  { name: "Layla Hassan", role: "Educator", gender: "female" as const, description: "Passionate about inclusive pedagogy and early childhood education." },
-  { name: "Amir Raza", role: "Mentor", gender: "male" as const, description: "Guiding young entrepreneurs in the social enterprise space." },
-  { name: "Nora Qureshi", role: "Volunteer", gender: "female" as const, description: "Leading grassroots efforts for environmental sustainability." },
-  { name: "Zainab Noor", role: "Artist", gender: "female" as const, description: "Digital artist focused on social justice narratives." },
-  { name: "Hamza Ali", role: "Athlete", gender: "male" as const, description: "Martial arts expert advocating for mental discipline." },
-  { name: "Fatima Zahra", role: "Altruist", gender: "female" as const, description: "Healthcare professional volunteering in rural clinics." },
-  { name: "Bilal Saeed", role: "Partner", gender: "male" as const, description: "Corporate lead fostering CSR initiatives for local NGOs." },
-  { name: "Mariam Aziz", role: "Creative Thinker", gender: "female" as const, description: "Designer creating accessible tools for disabled artists." },
+  {
+    name: "Mohammed Fakhruddin ", role: "Artleteist", gender: "male" as const, description: "Over the years, I have dedicated myself to honing a diverse set of passions—blending the roles of an artist, athlete, and altruist. These experiences have shaped who I am and inspired the creation of this space.As an artist, I value creativity, expression, and the beauty of ideas.My athletic background has taught me discipline, resilience, and a commitment to continuous growth.And as an altruist, I believe in giving back, fostering community, and making a positive impact on those around me." },
+  { name: "", role: "Athlete", gender: "male" as const, description: "A professional sprinter dedicated to promoting youth sports." },
+  { name: "", role: "Altruist", gender: "female" as const, description: "Community organizer focused on urban literacy programs." },
+  { name: "", role: "Creative Thinker", gender: "male" as const, description: "Strategist bridging the gap between tech and social impact." },
+  { name: "", role: "Educator", gender: "female" as const, description: "Passionate about inclusive pedagogy and early childhood education." },
+  { name: "", role: "Mentor", gender: "male" as const, description: "Guiding young entrepreneurs in the social enterprise space." },
+  { name: "", role: "Volunteer", gender: "female" as const, description: "Leading grassroots efforts for environmental sustainability." },
+  { name: "", role: "Artist", gender: "female" as const, description: "Digital artist focused on social justice narratives." },
+  { name: "", role: "Athlete", gender: "male" as const, description: "Martial arts expert advocating for mental discipline." },
+  { name: "", role: "Altruist", gender: "female" as const, description: "Healthcare professional volunteering in rural clinics." },
+  { name: "", role: "Partner", gender: "male" as const, description: "Corporate lead fostering CSR initiatives for local NGOs." },
+  { name: "", role: "Creative Thinker", gender: "female" as const, description: "Designer creating accessible tools for disabled artists." },
 ];
 
 
@@ -317,6 +320,7 @@ function CouncilMemberCard({
             {role}
           </p>
           <span className="h-px w-4 bg-terracotta/30" />
+          
         </div>
       </div>
 
@@ -329,7 +333,7 @@ function CouncilMemberCard({
             ${isExpanded ? "opacity-0 translate-y-2" : "text-terracotta/60 opacity-100"}
           `}
         >
-          Click Here
+          Learn More 
         </p>
       )}
 
@@ -337,7 +341,7 @@ function CouncilMemberCard({
       {description && (
         <div
           className={`
-            grid w-full transition-all duration-500 ease-in-out
+            grid w-full transition-all duration-500 ease-in-out 
             ${isExpanded
               ? "mt-6 grid-rows-[1fr] opacity-100"
               : "mt-0 grid-rows-[0fr] opacity-0"
@@ -346,7 +350,7 @@ function CouncilMemberCard({
         >
           <div className="overflow-hidden">
             <div className="border-t border-terracotta/10 pt-4">
-              <p className="text-sm leading-relaxed text-ink/70 italic">
+              <p className="text-sm leading-relaxed text-ink/70  font-serif">
                 {description}
               </p>
             </div>
@@ -426,7 +430,7 @@ function GetInvolved() {
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <Prose>
           <p>
-            Our NGO was established to empower people, support those in need,
+            Our Foundation was established to empower people, support those in need,
             and build stronger, more resilient communities. We work alongside
             volunteers, partners, donors, and community members who share a
             common vision of a more compassionate and equitable world.

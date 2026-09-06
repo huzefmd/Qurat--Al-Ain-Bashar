@@ -13,13 +13,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "A women-led NGO built on the pillars of Art, Athleticism, and Altruism. The art of giving.",
+          "A women-led Foundation built on the pillars of Art, Athleticism, and Altruism. The art of giving.",
       },
       { property: "og:title", content: "Qurat-Al-Ain Bashar Foundation — The art of giving" },
       {
         property: "og:description",
         content:
-          "A women-led NGO built on the pillars of Art, Athleticism, and Altruism. The art of giving.",
+          "A women-led Foundation built on the pillars of Art, Athleticism, and Altruism. The art of giving.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -98,7 +98,7 @@ function Home() {
               className="mt-6 max-w-xl font-serif text-[15px] leading-[1.85] text-ink/85 sm:text-[16px] sm:leading-[1.9] md:max-w-xl md:text-[17px] animate-fade-up"
               style={{ animationDelay: "350ms" }}
             >
-              A women-led NGO that transforms the Art of Giving into a purposeful movement,
+              A women-led Foundation that transforms the Art of Giving into a purposeful movement,
               expressed through the transformative pillars—Art, Athleticism, and Altruism—where
               talent inspires, passion empowers, and compassion creates lasting change.
             </p>

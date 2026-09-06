@@ -36,13 +36,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Purpose-driven, women-led NGO uniting artists, athletes and altruists for lasting social impact.",
+          "Purpose-driven, women-led Foundation uniting artists, athletes and altruists for lasting social impact.",
       },
       { property: "og:title", content: "About — Qurat-Al-Ain Bashar Foundation" },
       {
         property: "og:description",
         content:
-          "Purpose-driven, women-led NGO uniting artists, athletes and altruists for lasting social impact.",
+          "Purpose-driven, women-led Foundation uniting artists, athletes and altruists for lasting social impact.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -126,7 +126,7 @@ function About() {
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <Prose>
           <p>
-            Qurat-Al-Ain Bashar Foundation is a purpose-driven, women-led, and women-operated NGO
+            Qurat-Al-Ain Bashar Foundation is a purpose-driven, women-led, and women-operated Foundation
             committed to creating lasting social impact through the combined power of Art,
             Athleticism, and Altruism.
           </p>
@@ -137,7 +137,7 @@ function About() {
             skill, and service can become powerful tools for sustainable social transformation.
           </p>
           <p>
-            The NGO that blends the transformative power of art, athleticism, and altruism to create meaningful social impact. Our organization serves as a collaborative platform where artists, athletes, altruists unite
+            The Foundation that blends the transformative power of art, athleticism, and altruism to create meaningful social impact. Our organization serves as a collaborative platform where artists, athletes, altruists unite
             to raise awareness, inspire change, and deliver direct humanitarian and social welfare support.
           </p>
           <p>
@@ -148,12 +148,12 @@ function About() {
           </p>
           <p>
            By acting as a collaborative platform for artists, athletes, and altruists, the
-            NGO transforms passion into purpose — inspiring communities, fostering unity, and
+            Foundation transforms passion into purpose — inspiring communities, fostering unity, and
             delivering direct impact where it is needed most.
           </p>
 
           <p>
-            By acting as a collaborative platform for artists, athletes, altruists the NGO transforms passion into purpose — inspiring communities, fostering unity, and delivering direct impact where it is needed most.
+            By acting as a collaborative platform for artists, athletes, altruists the Foundation transforms passion into purpose — inspiring communities, fostering unity, and delivering direct impact where it is needed most.
           </p>
         </Prose>
       </section>
@@ -239,9 +239,9 @@ function About() {
           {/* Body — flowing paragraphs, easy to read */}
           <div className="mx-auto mt-8 max-w-3xl space-y-6 text-left font-serif text-[16px] leading-[1.85] text-ink/80 sm:space-y-7 sm:text-[17px] sm:leading-[1.9] md:text-[18px]">
             <p>
-              Our NGO is proudly managed entirely by women and operated exclusively by women.
-              Women have immense potential to lead, create, innovate, and serve, and this
-              organization exists because we believe in what women can build together.
+              Our Foundation is proudly and entirely managed by women and operated exclusively by women.  
+                Women have immense potential to lead, create, innovate, and serve, and this    
+              organization exists because we believe in what women can build together. 
             </p>
             <p>
               We are committed to creating leadership opportunities for women while building an
@@ -335,7 +335,7 @@ function About() {
             </motion.p>
 
             <motion.p variants={fadeUp} className="mb-2">
-              This NGO was built to become that space
+              This Foundation was built to become that space
             </motion.p>
 
             <motion.p variants={fadeUp} className="mb-2">
@@ -347,7 +347,7 @@ function About() {
             </motion.p>
 
             <motion.p variants={fadeUp} className="mb-2">
-              I dreamed of creating more than an NGO. I envisioned a community where creativity,
+              I dreamed of creating more than an Foundation. I envisioned a community where creativity,
               discipline, and compassion work together to produce lasting social impact — a
               place where artists inspire through their creativity, athletes empower through
               dedication, and altruists serve with selfless purpose, each contributing their
@@ -369,7 +369,7 @@ function About() {
             </motion.p>
 
             <motion.p variants={fadeUp} className="mb-2">
-              This organization is more than an NGO. It is a community of women who believe that
+              This organization is more than an Foundation. It is a community of women who believe that
               creativity, discipline, compassion, and purpose can transform lives. Every
               initiative we undertake is rooted in the belief that sustainable change begins when
               women are empowered to lead, collaborate, and uplift one another. Hope is not

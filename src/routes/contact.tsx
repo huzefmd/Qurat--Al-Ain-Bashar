@@ -44,7 +44,7 @@ function Contact() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-[0.15em] text-ink/50 sm:tracking-[0.2em]">Address</p>
-                  <p className="mt-1 text-sm text-ink/80">Details coming soon</p>
+                  <p className="mt-1 text-sm text-ink/80">HBR Bangalore</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -53,7 +53,7 @@ function Contact() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-[0.15em] text-ink/50 sm:tracking-[0.2em]">Email</p>
-                  <p className="mt-1 text-sm text-ink/80">Details coming soon</p>
+                  <p className="mt-1 text-sm text-ink/80">quratalainbasharfoundation@gmail.com</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -62,7 +62,7 @@ function Contact() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-[0.15em] text-ink/50 sm:tracking-[0.2em]">Phone</p>
-                  <p className="mt-1 text-sm text-ink/80">Details coming soon</p>
+                  <p className="mt-1 text-sm text-ink/80">+91 9740725637</p>
                 </div>
               </div>
             </div>
