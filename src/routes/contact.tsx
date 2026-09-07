@@ -3,6 +3,7 @@ import { PageShell, PageHero } from "@/components/site/PageShell";
 import { Socials } from "@/components/site/Footer";
 import { MapPin, Mail, Phone, Send } from "lucide-react";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import heroImg from "@/assets/hero-contact.jpg";
 
 export const Route = createFileRoute("/contact")({
@@ -75,11 +76,25 @@ function Contact() {
 
           <form
             className="rounded-2xl border border-border/60 bg-card p-5 shadow-sm sm:p-8 md:p-10"
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              setSent(true);
-              setTimeout(() => setSent(false), 4000);
-              (e.target as HTMLFormElement).reset();
+              const form = e.currentTarget;
+
+              try {
+                // REPLACE THESE WITH YOUR ACTUAL EMAILJS IDS
+                await emailjs.sendForm(
+                  import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                  form,
+                  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                );
+                setSent(true);
+                setTimeout(() => setSent(false), 4000);
+                form.reset();
+              } catch (error: any) {
+                console.error("EmailJS Error:", error);
+                alert(`Failed to send message: ${error?.text || error?.message || "Unknown error"}`);
+              }
             }}
           >
             <div className="pb-5">
@@ -88,7 +103,7 @@ function Contact() {
 
             <div className="grid gap-5 sm:grid-cols-2">
               <Field label="Email" name="email" type="email" required />
-              <Field label="Phone " name="Phone " type="int " required />
+              <Field label="Phone" name="phone" type="tel" required />
             </div>
 
             <div className="mt-5">

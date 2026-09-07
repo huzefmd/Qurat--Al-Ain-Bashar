@@ -276,7 +276,7 @@ function CouncilMemberCard({
           <User className="h-9 w-9" strokeWidth={1.6} />
         )}
 
-        {description && !isRoot && (
+        {description && (
           <div
             className={`
               absolute -bottom-1 -right-1
@@ -325,7 +325,7 @@ function CouncilMemberCard({
       </div>
 
       {/* Expand hint */}
-      {description && !isRoot && (
+      {description && (
         <p
           className={`
             mt-5 text-[9px] font-semibold uppercase tracking-[0.25em]

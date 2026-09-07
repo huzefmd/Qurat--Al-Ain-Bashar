@@ -73,10 +73,38 @@ function FormField({ field }: { field: RoleField }) {
 export function   RoleApplicationForm({ role }: { role: Role }) {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    (e.target as HTMLFormElement).reset();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    // Add the role label to the data so you know which form was submitted
+    const submissionData = {
+      ...data,
+      role: role.label,
+    };
+
+    try {
+      const response = await fetch("https://formspree.io/f/xvkowgpq", {
+        method: "POST",
+        body: JSON.stringify(submissionData),
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("An error occurred while submitting. Please try again.");
+    }
   };
 
   return (
