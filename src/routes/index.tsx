@@ -63,7 +63,7 @@ function Home() {
       <Nav transparentOnTop />
 
       {/* HERO */}
-      <section className="relative min-h-[90vh] sm:min-h-[92vh] overflow-hidden">
+      <section className="relative min-h-[90vh] sm:min-h-[92vh] overflow-hidden bg-ivory">
         {/* Subtle paper texture using a radial wash so the page feels warm and crafted */}
         <div
           aria-hidden
@@ -77,11 +77,15 @@ function Home() {
         <img
           src={hero}
           alt="A hijabi woman teacher guiding young children through a lesson"
-          className="absolute inset-0 h-full w-full object-cover object-[70%] sm:object-[60%] md:object-right"
+          className="absolute inset-0 h-full w-full object-contain object-right"
+          style={{
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%)',
+            maskImage: 'linear-gradient(to right, transparent 0%, black 40%)',
+          }}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/85 to-ivory/20 sm:from-ivory sm:via-ivory/55 sm:to-ivory/10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ivory/40 via-transparent to-ivory/80 sm:from-ivory/10 sm:via-transparent sm:to-ivory/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ivory via-ivory/80 to-transparent sm:from-ivory sm:via-ivory/60 sm:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ivory/20 via-transparent to-ivory/40 sm:from-ivory/10 sm:via-transparent sm:to-ivory/20" />
         <div className="relative mx-auto flex min-h-[90vh] sm:min-h-[92vh] max-w-7xl flex-col justify-center px-5 pt-28 pb-20 sm:px-8 sm:pt-32 sm:pb-24 lg:px-8">
           <div className="max-w-2xl">
             <div

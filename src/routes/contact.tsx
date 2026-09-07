@@ -4,7 +4,7 @@ import { Socials } from "@/components/site/Footer";
 import { MapPin, Mail, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import heroImg from "@/assets/hero-contact.jpg";
+import heroImg from "@/assets/Contact page.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

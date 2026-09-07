@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { PageShell, PageHero } from "@/components/site/PageShell";
-import heroImg from "@/assets/hero-gallery.jpg";
+import heroImg from "@/assets/The purpose store page.png";
 
 export const Route = createFileRoute('/purpose')({
     head: () => ({
